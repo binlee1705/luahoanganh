@@ -2328,4 +2328,50 @@ img:hover {
   100% {
     transform: rotate(0) scale(1) skew(1deg);
   }
+}
+@media (max-width: 1366px) {
+  :root {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 1199px) {
+  .openList {
+    display: block;
+    width: 35px;
+    margin-left: 0.9375rem;
+  }
+  .openList hr {
+    -moz-transition: 0.5s all ease-in-out;
+    background: #fff;
+    border: 1px solid #fff;
+    transition: 0.5s all ease-in-out;
+    z-index: 98;
+    opacity: 1;
+    margin: 0.625rem 0;
+  }
+  .openList hr:first-child {
+    margin-top: 0;
+  }
+  .openList hr:last-child {
+    margin-bottom: 0;
+  }
+  .openList.ac {
+    position: relative;
+    z-index: 21;
+  }
+  .openList.ac hr:nth-child(2) {
+    opacity: 0;
+  }
+  .openList.ac hr:nth-child(1) {
+    -moz-transform: rotate(135deg) translateX(5px) translateY(-8px);
+    background: #fff;
+    border-color: #fff;
+    transform: rotate(135deg) translateX(5px) translateY(-8px);
+  }
+  .openList.ac hr:nth-child(3) {
+    -moz-transform: rotate(-135deg) translateX(6px) translateY(8px);
+    background: #fff;
+    border-color: #fff;
+    transform: rotate(-135deg) translateX(7px) translateY(10px);
+  }
 }/*# sourceMappingURL=style.css.map */

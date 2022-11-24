@@ -102,6 +102,9 @@ $(document).ready(() => {
     $('#staffHome .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut"));
     });
+    $('#customer .group').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 5, 5, 5, 5], "fadeIn", "fadeOut"));
+    });
     $(".tvmp").each(function () {
         animationChar($(this))
     })

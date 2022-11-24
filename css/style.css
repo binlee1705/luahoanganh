@@ -1440,6 +1440,47 @@ img:hover {
   position: absolute;
 }
 
+#toggleSearch {
+  width: 0.8125rem;
+  text-align: center;
+}
+#toggleSearch.active i::before {
+  content: "\f00d";
+}
+
+#searchForm {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 28.0625rem;
+  height: 2.3125rem;
+  border: 1px solid #cccccc;
+}
+#searchForm > div {
+  display: flex;
+}
+#searchForm > div .ipt {
+  flex: 1;
+  border: none;
+  outline: none;
+  height: 2.1875rem;
+  padding: 0 0.625rem;
+}
+#searchForm > div .btnSearch {
+  height: 2.3125rem;
+  width: 2.5rem;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+#searchForm > div .btnSearch:hover {
+  background: #073d9f;
+  color: #fff;
+}
+
 #slide {
   position: relative;
 }
@@ -1871,6 +1912,13 @@ img:hover {
   margin-top: 3.125rem;
   position: relative;
 }
+#staffHome .nameCate {
+  font-size: 3.125rem;
+  font-weight: bold;
+  position: absolute;
+  left: calc(50.878477306% + 2.5rem);
+  top: 3.75rem;
+}
 #staffHome .group .item {
   display: flex;
   justify-content: space-between;
@@ -2135,6 +2183,18 @@ img:hover {
   border: 2px solid #fff;
   padding: 0.9375rem 1.25rem;
   margin-top: 1.875rem;
+}
+#footer .wrp .right .group .regis {
+  margin-top: 1.5625rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+#footer .wrp .right .group .regis a {
+  display: block;
+}
+#footer .wrp .right .group .regis a img {
+  max-width: 100%;
 }
 
 #afterFoot {

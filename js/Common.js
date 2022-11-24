@@ -95,7 +95,6 @@ $(document).ready(() => {
         });
     // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
-
     $('#iconService .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [8, 8, 8, 8, 8], "", ""));
     });
@@ -108,6 +107,17 @@ $(document).ready(() => {
     $(".tvmp").each(function () {
         animationChar($(this))
     })
+
+    $("html").on("click", "#toggleSearch", function () {
+        $(this).toggleClass("active");
+        $(this).next("#searchForm").fadeToggle();
+    })
+    $(document).click(function (e) {
+        if (!$("#searchForm").is(e.target) && $("#searchForm").has(e.target).length === 0 && !$("#toggleSearch").is(e.target) && $("#toggleSearch").has(e.target).length === 0) {
+            $("#searchForm").fadeOut();
+            $("#toggleSearch").removeClass("active");
+        }
+    });
 });
 
 

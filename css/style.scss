@@ -53,13 +53,13 @@ img {
   span {
     display: block;
     &.in {
-      -webkit-animation: ah-rotate-3-in 0.6s forwards;
-      animation: ah-rotate-3-in 0.6s forwards;
+      -webkit-animation: fadeIn 0.5s forwards;
+      animation: fadeIn 0.5s forwards;
     }
-    &.out {
-      -webkit-animation: ah-rotate-3-out 0.6s forwards;
-      animation: ah-rotate-3-out 0.6s forwards;
-    }
+    // &.out {
+    //   -webkit-animation: ah-rotate-3-out 0.6s forwards;
+    //   animation: ah-rotate-3-out 0.6s forwards;
+    // }
   }
 }
 
@@ -188,11 +188,11 @@ img {
     gap: ptr(50);
     .btnBanner {
       font-weight: 400;
-      font-size: ptr(25);
+      font-size: ptr(20);
       color: #fff;
       padding: ptr(10) ptr(40) ptr(12) ptr(40);
       border: 2px solid #ffffff;
-      min-width: ptr(372);
+      min-width: ptr(300);
       text-align: center;
       &:first-child {
         background: #0ea8cc;

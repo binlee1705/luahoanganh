@@ -1355,6 +1355,7 @@ img:hover {
 }
 
 #header {
+  background: #fff;
   padding: 0.4375rem 0;
   position: -webkit-sticky;
   position: sticky;

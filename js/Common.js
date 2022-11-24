@@ -93,14 +93,48 @@ $(document).ready(() => {
             $(this).parent('li').addClass('active').siblings().removeClass('active');
             e.preventDefault();
         });
-    $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
+    // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
 
-    // $('#photoAlbumRight .group').each(function () {
-    //     $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 10], true, true, true, [1, 4, 3, 2, 1], "", ""));
-    // }); 
-
+    $('#iconService .group').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [8, 8, 8, 8, 8], "", ""));
+    });
+    $('#staffHome .group').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut"));
+    });
+    $(".tvmp").each(function () {
+        animationChar($(this))
+    })
 });
+
+
+function animationChar(ele, animationIn = "in", animationOut = "out", split = 1) {
+    if (split === 1) {
+        var text = ele.text().trim();
+        const arrayChar = text.split('');
+        if (arrayChar.length > 0) {
+            var innerHtml = "";
+            for (var i = 0; i < arrayChar.length; i++) {
+                if (arrayChar[i] === ' ') {
+                    innerHtml += `<span class="item"> &nbsp;</span>`
+                } else {
+                    innerHtml += `<span class="item">${arrayChar[i]}</span>`
+                }
+            }
+            ele.html(innerHtml)
+        }
+    }
+    setInterval(() => {
+        ele.find(".item").each(function (i) {
+            setTimeout(() => {
+                $(this).attr("class", `item ${animationOut}`)
+                setTimeout(() => {
+                    $(this).attr("class", `item ${animationIn}`)
+                }, i);
+            }, (i + 1) * 60);
+        });
+    }, 4000);
+}
 
 var size = parseInt($(".noidung").css("font-size")),
     lineheight = parseInt($(".noidung").css("line-height"));
@@ -114,7 +148,6 @@ function Increasenoidung() {
     $(".noidung").find("*").css("cssText",
         "font-size:" + size + "px !important; line-height:" + lineheight + "px !important");
 }
-
 function Decreasenoidung() {
     size--;
     lineheight -= 2;
@@ -122,7 +155,6 @@ function Decreasenoidung() {
     $(".noidung").find("*").css("cssText",
         "font-size:" + size + "px !important; line-height:" + lineheight + "px !important");
 }
-
 function Resetnoidung() {
     size = 16;
     lineheight = 24;

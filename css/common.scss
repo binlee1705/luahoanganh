@@ -1,5 +1,5 @@
-﻿$color-hover: #0c4bab;
-
+﻿$color-hover: #073d9f;
+$color-hover2: #0ea8cc;
 //function
 @function ptr($px) {
   @return ($px * 0.0625) + rem;
@@ -11,6 +11,10 @@
 
 @mixin transition {
   transition: 0.3s all ease-in-out;
+}
+
+@function percent($item, $total: 1366) {
+  @return ($item / $total) * 100%;
 }
 
 %owl-dots {

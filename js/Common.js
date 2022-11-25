@@ -1,5 +1,5 @@
 ﻿//"use strict"; 
-function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut) {
+function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut, mouseDrag = true) {
     var option = {
         items: num,
         autoplay: num > items[0] ? autoplay : false,
@@ -14,6 +14,7 @@ function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut)
         navText: [''],
         animateIn: animateIn,
         animateOut: animateOut,
+        mouseDrag: mouseDrag,
         responsive: {
             0: {
                 items: items[4],
@@ -102,7 +103,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [10, 10, 10, 10, 10], "", ""));
     });
     $('#staffHome:not(.list) .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut"));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut", false));
     });
     $('#customer .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 5, 5, 5, 5], "fadeIn", "fadeOut"));

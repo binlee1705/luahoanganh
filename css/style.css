@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "css_rwd_common.css";
-#partner .wrp .group .owl-nav .owl-prev, #staffHome .group .owl-nav .owl-prev, #iconService .group .owl-nav .owl-prev,
+#activity .wrp .group .owl-nav .owl-prev, #partner .wrp .group .owl-nav .owl-prev, #staffHome .group .owl-nav .owl-prev, #iconService .group .owl-nav .owl-prev,
+#activity .wrp .group .owl-nav .owl-next,
 #partner .wrp .group .owl-nav .owl-next,
 #staffHome .group .owl-nav .owl-next,
 #iconService .group .owl-nav .owl-next {
@@ -18,7 +19,8 @@
   color: #000;
   border-radius: 0 0.3125rem 0.3125rem 0;
 }
-#partner .wrp .group .owl-nav .owl-prev:before, #staffHome .group .owl-nav .owl-prev:before, #iconService .group .owl-nav .owl-prev:before,
+#activity .wrp .group .owl-nav .owl-prev:before, #partner .wrp .group .owl-nav .owl-prev:before, #staffHome .group .owl-nav .owl-prev:before, #iconService .group .owl-nav .owl-prev:before,
+#activity .wrp .group .owl-nav .owl-next:before,
 #partner .wrp .group .owl-nav .owl-next:before,
 #staffHome .group .owl-nav .owl-next:before,
 #iconService .group .owl-nav .owl-next:before {
@@ -26,6 +28,7 @@
   font-weight: 900;
   content: "\f053";
 }
+#activity .wrp .group .owl-nav .owl-next.owl-next,
 #partner .wrp .group .owl-nav .owl-next.owl-next,
 #staffHome .group .owl-nav .owl-next.owl-next,
 #iconService .group .owl-nav .owl-next.owl-next {
@@ -33,12 +36,14 @@
   right: 0;
   border-radius: 0.3125rem 0 0 0.3125rem;
 }
+#activity .wrp .group .owl-nav .owl-next.owl-next:before,
 #partner .wrp .group .owl-nav .owl-next.owl-next:before,
 #staffHome .group .owl-nav .owl-next.owl-next:before,
 #iconService .group .owl-nav .owl-next.owl-next:before {
   content: "\f054";
 }
-#partner .wrp .group .owl-nav .owl-prev:hover, #staffHome .group .owl-nav .owl-prev:hover, #iconService .group .owl-nav .owl-prev:hover,
+#activity .wrp .group .owl-nav .owl-prev:hover, #partner .wrp .group .owl-nav .owl-prev:hover, #staffHome .group .owl-nav .owl-prev:hover, #iconService .group .owl-nav .owl-prev:hover,
+#activity .wrp .group .owl-nav .owl-next:hover,
 #partner .wrp .group .owl-nav .owl-next:hover,
 #staffHome .group .owl-nav .owl-next:hover,
 #iconService .group .owl-nav .owl-next:hover {
@@ -1331,8 +1336,9 @@ body {
 img {
   transition: 0.3s all ease-in-out;
 }
-img:hover {
-  filter: brightness(110%);
+
+.wImage:hover img {
+  transform: translateY(-50%) translateX(-50%) scale(1.05);
 }
 
 .openSub {
@@ -2837,6 +2843,9 @@ img:hover {
   width: 33.3333333333%;
   padding: 0 1.875rem;
 }
+#news.list .newsGroup.newsStyle5 .parent:not(:last-child) {
+  border-right: 1px solid #cccccc;
+}
 #news.list .newsGroup.newsStyle5 .parent .cateName {
   display: block;
   font-weight: bold;
@@ -2868,6 +2877,56 @@ img:hover {
   font-size: 1.125rem;
   line-height: 1.6875rem;
   margin-top: 0.625rem;
+}
+#news.list .newsGroup.newsStyle6 .name {
+  line-height: 1.875rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.8125rem;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item {
+  display: flex;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .wImage {
+  width: 56.2957540264%;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .wImage::before {
+  padding-bottom: 59.0377113134%;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .info {
+  flex: 1;
+  background: #f7f9fb;
+  padding: 1.25rem;
+  padding-bottom: 1.625rem;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .info .name {
+  font-size: 1.875rem;
+  line-height: 2.8125rem;
+  font-weight: bold;
+  display: block;
+  margin-top: 0;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .info .date {
+  font-size: 0.9375rem;
+  color: #737373;
+  margin: 0.9375rem 0;
+}
+#news.list .newsGroup.newsStyle6 .type1 .item .info .cont {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+#news.list .newsGroup.newsStyle6 .type2 {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.1875rem;
+}
+#news.list .newsGroup.newsStyle6 .type2 .item {
+  width: calc((100% - 6.5625rem) / 4);
+}
+#news.list .newsGroup.newsStyle6 .type2 .item .wImage::before {
+  padding-bottom: 65.1898734177%;
 }
 
 .newest .wrp {
@@ -2919,6 +2978,11 @@ img:hover {
 }
 .newest .wrp .right {
   width: 28.9165446559%;
+}
+.newest .wrp .right > div {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0.625rem;
 }
 
 .newsHot .title {
@@ -2975,6 +3039,281 @@ img:hover {
 }
 .pagination li.active a, .pagination li:hover a {
   background: #ccc;
+  color: #fff;
+}
+
+#aboutUs .nameCate {
+  position: static;
+  font-size: 2.1875rem;
+  display: block;
+  border-bottom: 1px solid #737373;
+  padding-bottom: 0.625rem;
+  margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+#aboutUs .profile {
+  float: right;
+  padding-left: 1.25rem;
+  padding-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutUs .profile .img {
+  position: relative;
+}
+#aboutUs .profile .img .expand {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.625rem;
+  font-size: 2.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  width: 3.375rem;
+  height: 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+#aboutUs .profile .btnDownProfile {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  padding: 0 2.5rem;
+  background: #0ea8cc;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 1.875rem;
+}
+#aboutUs .profile .btnDownProfile .icon {
+  margin-right: 1.25rem;
+}
+#aboutUs .profile .btnDownProfile:hover {
+  background: #073d9f;
+}
+#aboutUs .noidung {
+  background: #f5f9fb;
+  padding: 2.1875rem 1.5625rem 5rem 5.625rem;
+  font-size: 1.125rem;
+  line-height: 2.1875rem;
+}
+#aboutUs .date {
+  color: #737373;
+  font-size: 0.875rem;
+}
+
+#promise {
+  margin-top: 4.6875rem;
+}
+#promise .wrp {
+  border: 1px solid #0ea8cc;
+  border-radius: 0.4375rem;
+  padding: 2.1875rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#promise .wrp .nameCate {
+  position: absolute;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  color: #073d9f;
+  font-weight: bold;
+  padding: 0 2.8125rem;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  top: 0;
+}
+#promise .wrp .content {
+  margin-bottom: 1.5625rem;
+  width: 64.2752562225%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#promise .wrp .content .main {
+  flex: 1;
+  padding-left: 1.5625rem;
+  font-size: 1rem;
+}
+#promise .wrp .content .main ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: 0.9375rem;
+}
+#promise .wrp .content .main ul li {
+  position: relative;
+}
+#promise .wrp .content .main ul li:not(:last-child) {
+  margin-bottom: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+#promise .wrp .content .main ul li i {
+  margin-right: 0.1875rem;
+  color: #0ea8cc;
+}
+#promise .wrp .content .main ul li b {
+  color: #ff7200;
+}
+#promise .wrp .content .main ul li:not(:last-child):after {
+  content: "";
+  height: 1px;
+  width: 14.0625rem;
+  background: #0ea8cc;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#promise .wrp .lstBtn {
+  display: flex;
+  gap: 1.5625rem;
+  width: 64.2752562225%;
+}
+#promise .wrp .lstBtn .btnPromise {
+  width: calc(100% - 3.125rem/ 3);
+  display: flex;
+  align-items: center;
+  background: #0ea8cc;
+  color: #fff;
+  height: 3.125rem;
+  justify-content: center;
+  border-radius: 0.4375rem;
+}
+#promise .wrp .lstBtn .btnPromise .icon {
+  margin-right: 0.9375rem;
+  font-size: 1.25rem;
+}
+#promise .wrp .lstBtn .btnPromise .text {
+  font-size: 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#promise .wrp .lstBtn .btnPromise .text span {
+  font-size: 0.875rem;
+}
+#promise .wrp .lstBtn .btnPromise .text b {
+  font-size: 1.125rem;
+  margin-top: -0.125rem;
+}
+#promise .wrp .lstBtn .btnPromise:hover {
+  background: #073d9f;
+}
+#promise .wrp .info {
+  margin-top: 1.5625rem;
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  text-align: center;
+}
+#promise .wrp .info .ttu {
+  font-size: 1.375rem;
+  font-weight: 500;
+  margin-bottom: 0.3125rem;
+}
+
+#prize .wrp {
+  margin-top: 2.5rem;
+}
+#prize .wrp .cateName {
+  position: relative;
+  font-size: 2.5rem;
+  border-bottom: 1px solid #666666;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+#prize .wrp .cateName a {
+  display: inline-block;
+  margin-bottom: -0.0625rem;
+  padding: 0 3.125rem;
+  font-weight: bold;
+  background: #fff;
+}
+#prize .wrp .group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+#prize .wrp .group .wImage {
+  width: calc((100% - 3.75rem) / 3);
+  background: #f5f9fb;
+  border-radius: 0.3125rem;
+}
+#prize .wrp .group .wImage::before {
+  padding-bottom: 64.9651972158%;
+}
+
+#activity {
+  margin-top: 3.75rem;
+  background: #4a4a4a;
+  padding: 1.5625rem 0 2.5rem;
+  overflow: hidden;
+  position: relative;
+}
+#activity .wrp {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+#activity .wrp .cateName {
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2.1875rem;
+  width: 100%;
+}
+#activity .wrp .group {
+  width: 54.2459736457%;
+  position: static;
+}
+#activity .wrp .group .item {
+  transition: 0.3s all ease-in-out;
+}
+#activity .wrp .group .item .wImage::before {
+  padding-bottom: 66.6666666667%;
+}
+#activity .wrp .group .item .name {
+  display: block;
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
+  color: #fff;
+  margin-top: 1.875rem;
+  transition: 0.1s all ease-in-out;
+}
+#activity .wrp .group .owl-stage-outer {
+  overflow: visible;
+}
+#activity .wrp .group .owl-stage-outer .owl-item:not(.active) .item {
+  transform: scale(0.6) translateX(30%);
+}
+#activity .wrp .group .owl-stage-outer .owl-item:not(.active) .item .name {
+  opacity: 0;
+}
+#activity .wrp .group .owl-stage-outer .owl-item.active ~ .owl-item .item {
+  transform: scale(0.6) translateX(-30%);
+}
+#activity .wrp .group .owl-nav .owl-next,
+#activity .wrp .group .owl-nav .owl-prev {
+  background: transparent;
+  color: #868788;
+  font-size: 3.75rem;
+  left: 1.25rem;
+}
+#activity .wrp .group .owl-nav .owl-next.owl-next,
+#activity .wrp .group .owl-nav .owl-prev.owl-next {
+  right: 1.25rem;
+}
+#activity .wrp .group .owl-nav .owl-next:hover,
+#activity .wrp .group .owl-nav .owl-prev:hover {
+  background: transparent;
   color: #fff;
 }
 

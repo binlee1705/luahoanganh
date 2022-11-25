@@ -111,6 +111,22 @@ $(document).ready(() => {
     $('#partner .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 40, 40, 40, 40], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
     });
+    $('#activity .group').each(function () {
+        if ($(this).find(">*").length > 1) {
+            $(this).owlCarousel({
+                items: 1,
+                center: true,
+                loop: true,
+                stagePadding: 30,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000,
+                margin: 50,
+                nav: true,
+                navText: ""
+            });
+        }
+    });
     $(".tvmp").each(function () {
         animationChar($(this))
     })
@@ -119,6 +135,7 @@ $(document).ready(() => {
         $(this).toggleClass("active");
         $(this).next("#searchForm").fadeToggle();
     })
+
     $(document).click(function (e) {
         if (!$("#searchForm").is(e.target) && $("#searchForm").has(e.target).length === 0 && !$("#toggleSearch").is(e.target) && $("#toggleSearch").has(e.target).length === 0) {
             $("#searchForm").fadeOut();

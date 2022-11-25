@@ -95,8 +95,11 @@ $(document).ready(() => {
         });
     // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
-    $('#iconService .group').each(function () {
+    $('#iconService:not(.inside) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [8, 8, 8, 8, 8], "", ""));
+    });
+    $('#iconService.inside .group').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [10, 10, 10, 10, 10], "", ""));
     });
     $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut"));

@@ -255,7 +255,6 @@ img {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        padding: ptr(5) 0;
         .icon {
           position: relative;
           top: 0;
@@ -293,6 +292,21 @@ img {
         color: #99a9cb;
         &:hover {
           background: #11111190;
+        }
+      }
+    }
+  }
+  &.inside {
+    background: #073d9f;
+    .group {
+      .item {
+        .icon {
+          img {
+            height: ptr(40);
+          }
+          .text {
+            font-size: ptr(15);
+          }
         }
       }
     }
@@ -1323,7 +1337,7 @@ img {
           flex-direction: column;
           .hotline {
             font-weight: bold;
-            font-size: ptr(50);
+            font-size: ptr(40);
             color: #fe0000;
           }
           span {
@@ -1354,8 +1368,439 @@ img {
   }
 }
 
-@import "css_rwd_common.css";
+#news {
+  &.list {
+    margin-bottom: ptr(50);
+    .newsGroup {
+      margin-top: ptr(35);
+      .lstCate {
+        padding-bottom: ptr(7);
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid $color-hover;
+        margin-bottom: ptr(25);
+        .cateLeft {
+          font-weight: bold;
+          font-size: ptr(30);
+          padding-right: ptr(60);
+          color: $color-hover;
+          &:hover {
+            color: $color-hover2;
+          }
+        }
+        .cateRight {
+          flex: 1;
+          font-size: ptr(16);
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+          padding-left: ptr(20);
+          gap: ptr(40);
+          li {
+            > * {
+              display: block;
+              text-align: center;
+            }
+            &:hover {
+              color: $color-hover;
+            }
+          }
+        }
+      }
+      &.newsStyle1 {
+        .name {
+          line-height: ptr(30);
+          font-size: ptr(20);
+          font-weight: bold;
+          display: block;
+          margin-top: ptr(13);
+        }
+        .type1 {
+          display: flex;
+          justify-content: space-between;
+          .left {
+            width: percent(927);
+            .item {
+              .wImage {
+                &::before {
+                  padding-bottom: wImage(482, 927);
+                }
+              }
+              .info {
+                background: #f7f9fb;
+                padding: ptr(20);
+                padding-bottom: ptr(26);
+                .name {
+                  font-size: ptr(30);
+                  line-height: ptr(45);
+                  font-weight: bold;
+                  display: block;
+                  margin-top: 0;
+                }
+                .date {
+                  font-size: ptr(15);
+                  color: #737373;
+                  margin: ptr(15) 0;
+                }
+                .cont {
+                  font-size: ptr(20);
+                  line-height: ptr(30);
+                }
+              }
+            }
+          }
+          .right {
+            width: percent(400);
+            .item {
+              .wImage {
+                &:before {
+                  padding-bottom: wImage(262, 399);
+                }
+              }
+              .name {
+                line-height: ptr(30);
+                font-size: ptr(20);
+                font-weight: bold;
+                display: block;
+                margin-top: ptr(10);
+              }
+              &:not(:last-child) {
+                padding-bottom: ptr(20);
+                margin-bottom: ptr(20);
+                border-bottom: 1px solid #cccccc;
+              }
+            }
+          }
+        }
+        .type2 {
+          margin-top: ptr(30);
+          display: flex;
+          flex-wrap: wrap;
+          gap: ptr(35);
+          .item {
+            width: calc((100% - #{ptr(105)}) / 4);
+            .wImage::before {
+              padding-bottom: wImage(206, 316);
+            }
+          }
+        }
+      }
+      &.newsStyle2 {
+        .type1 {
+          display: flex;
+          justify-content: space-between;
+          .left {
+            width: percent(852);
+            padding-right: ptr(20);
+            border-right: 1px solid #ccc;
+            .item {
+              display: flex;
+              align-items: flex-start;
+              .wImage {
+                width: percent(399, 832);
+                &:before {
+                  padding-bottom: wImage(263, 399);
+                }
+              }
+              .info {
+                flex: 1;
+                padding-left: ptr(18);
+                .name {
+                  display: block;
+                  font-weight: bold;
+                  font-size: ptr(20);
+                  line-height: ptr(30);
+                }
+                .cont {
+                  margin-top: ptr(18);
+                  font-size: ptr(18);
+                  line-height: ptr(27);
+                }
+              }
+            }
+          }
+          .right {
+            width: percent(513);
+            padding-left: ptr(25);
+            .item {
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              .wImage {
+                width: percent(170, 488);
+                &:before {
+                  padding-bottom: wImage(112, 170);
+                }
+              }
+              &:not(:last-child) {
+                padding-bottom: ptr(18);
+                margin-bottom: ptr(18);
+                border-bottom: 1px solid #ccc;
+              }
+              .info {
+                flex: 1;
+                padding-left: ptr(18);
+                .name {
+                  font-size: ptr(18);
+                  line-height: ptr(27);
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.newsStyle3 {
+        .name {
+          line-height: ptr(30);
+          font-size: ptr(20);
+          font-weight: bold;
+          display: block;
+          margin-top: ptr(13);
+        }
+        .type2 {
+          display: flex;
+          flex-wrap: wrap;
+          gap: ptr(35);
+          .item {
+            width: calc((100% - #{ptr(105)}) / 4);
+            .wImage::before {
+              padding-bottom: wImage(206, 316);
+            }
+          }
+        }
+      }
+      &.newsStyle4 {
+        .type1 {
+          display: flex;
+          flex-wrap: wrap;
+          .item {
+            margin-bottom: ptr(25);
+            width: 50%;
+            display: flex;
+            padding-right: ptr(25);
+            align-items: flex-start;
+            &:nth-child(2n) {
+              padding-left: ptr(25);
+              padding-right: 0;
+              border-left: 1px solid #ccc;
+            }
+            .wImage {
+              width: percent(321, 655);
+              &::before {
+                padding-bottom: wImage(211, 321);
+              }
+            }
+            .info {
+              flex: 1;
+              padding-left: ptr(18);
+              .name {
+                display: block;
+                font-weight: bold;
+                font-size: ptr(22);
+                line-height: ptr(30);
+                margin-bottom: ptr(18);
+              }
+              .cont {
+                font-size: ptr(18);
+                line-height: ptr(27);
+              }
+            }
+          }
+        }
+        .type2 {
+          padding-top: ptr(25);
+          border-top: 1px solid #ccc;
+          ul {
+            display: flex;
+            gap: ptr(60);
+            li {
+              width: calc((100% - #{ptr(120)}) / 3);
 
+              .name {
+                display: block;
+                line-height: ptr(27);
+                font-size: ptr(18);
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+      &.newsStyle5 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: ptr(30) 0;
+        width: calc(100% + ptr(60));
+        margin-left: ptr(-30);
+        margin-right: ptr(-30);
+        .parent {
+          width: calc(100% / 3);
+          padding: 0 ptr(30);
+          .cateName {
+            display: block;
+            font-weight: bold;
+            font-size: ptr(30);
+            margin-bottom: ptr(12);
+            color: $color-hover;
+            &:hover {
+              color: $color-hover2;
+            }
+          }
+          .group {
+            .item {
+              &:not(:last-child) {
+                margin-bottom: ptr(20);
+                padding-bottom: ptr(20);
+                border-bottom: 1px solid #cccccc;
+              }
+              .wImage {
+                margin-bottom: ptr(25);
+                &::before {
+                  padding-bottom: wImage(241, 395);
+                }
+              }
+              .name {
+                display: block;
+                font-weight: bold;
+                font-size: ptr(20);
+                line-height: ptr(30);
+              }
+              .cont {
+                font-size: ptr(18);
+                line-height: ptr(27);
+                margin-top: ptr(10);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.newest {
+  .wrp {
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: percent(935);
+      .title {
+        font-size: ptr(30);
+        color: $color-hover;
+        border-bottom: 1px solid $color-hover;
+        padding-bottom: ptr(10);
+        margin-bottom: ptr(30);
+        font-weight: bold;
+      }
+      .group {
+        .item {
+          margin-bottom: ptr(30);
+          padding-bottom: ptr(30);
+          border-bottom: 1px solid #ccc;
+          display: flex;
+          align-items: flex-start;
+          .wImage {
+            width: percent(284, 935);
+            &::before {
+              padding-bottom: wImage(184, 284);
+            }
+          }
+          .info {
+            flex: 1;
+            padding-left: ptr(18);
+            .name {
+              display: block;
+              font-size: ptr(22);
+              line-height: ptr(33);
+              font-weight: bold;
+            }
+            .date {
+              font-size: ptr(15);
+              color: #737373;
+              margin: ptr(12) 0 ptr(20) 0;
+            }
+            .cont {
+              line-height: ptr(27);
+              font-size: ptr(18);
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: percent(395);
+    }
+  }
+}
+.newsHot {
+  .title {
+    font-size: ptr(26);
+    background: $color-hover;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    padding: ptr(13) ptr(18);
+    margin-bottom: ptr(20);
+  }
+  .group {
+    .item {
+      display: flex;
+      margin-bottom: ptr(20);
+      .wImage {
+        width: percent(110, 395);
+        &::before {
+          padding-bottom: wImage(73, 110);
+        }
+      }
+      .info {
+        flex: 1;
+        padding-left: ptr(18);
+        display: flex;
+        flex-direction: column;
+        .cateName {
+          font-size: ptr(13);
+          line-height: ptr(26);
+        }
+        .name {
+          font-size: ptr(16);
+          font-weight: bold;
+          line-height: ptr(23);
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  margin-top: ptr(20);
+  display: flex;
+  gap: ptr(10);
+  justify-content: flex-end;
+  li {
+    a {
+      width: ptr(40);
+      height: ptr(36);
+      border: 1px solid #cccccc;
+      border-radius: ptr(5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      font-size: ptr(18);
+    }
+    &.active,
+    &:hover {
+      a {
+        background: #ccc;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@import "css_rwd_common.css";
 @keyframes hotline-circle-anim {
   0% {
     transform: rotate(0) scale(0.5) skew(1deg);
@@ -1370,7 +1815,6 @@ img {
     opacity: 0.1;
   }
 }
-
 @keyframes hotline-circle-fill-anim {
   0% {
     transform: rotate(0) scale(0.7) skew(1deg);
@@ -1385,7 +1829,6 @@ img {
     opacity: 0.2;
   }
 }
-
 @keyframes hotline-circle-img-anim {
   0% {
     transform: rotate(0) scale(1) skew(1deg);
@@ -1409,5 +1852,4 @@ img {
     transform: rotate(0) scale(1) skew(1deg);
   }
 }
-
 @import "css_rwd.scss";

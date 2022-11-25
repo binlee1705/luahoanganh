@@ -2533,6 +2533,8 @@ img:hover {
   color: #0ea8cc;
 }
 #contact .content .right .item .info {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   margin-left: 1.5625rem;
   display: flex;
@@ -2545,6 +2547,13 @@ img:hover {
   font-weight: bold;
   font-size: 3.125rem;
   color: #fe0000;
+}
+#contact .content .right .item .info span {
+  margin-top: -1.875rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #contact .content .right .item:hover {
   color: #fff;

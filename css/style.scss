@@ -1312,6 +1312,8 @@ img {
           color: $color-hover2;
         }
         .info {
+          display: flex;
+          flex-direction: column;
           flex: 1;
           b {
             margin-bottom: ptr(25);
@@ -1323,6 +1325,13 @@ img {
             font-weight: bold;
             font-size: ptr(50);
             color: #fe0000;
+          }
+          span {
+            margin-top: ptr(-30);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
         }
         &:hover {

@@ -779,6 +779,7 @@ img {
     }
     .group {
       .item {
+        align-items: center;
         &:nth-child(2n) {
           background: #f5f9fb;
           flex-direction: row-reverse;

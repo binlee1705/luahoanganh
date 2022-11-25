@@ -98,11 +98,14 @@ $(document).ready(() => {
     $('#iconService .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [8, 8, 8, 8, 8], "", ""));
     });
-    $('#staffHome .group').each(function () {
+    $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut"));
     });
     $('#customer .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 5, 5, 5, 5], "fadeIn", "fadeOut"));
+    });
+    $('#partner .group').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 40, 40, 40, 40], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
     });
     $(".tvmp").each(function () {
         animationChar($(this))

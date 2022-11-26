@@ -1524,6 +1524,7 @@ img {
 #iconService {
   position: relative;
   background: rgba(7, 61, 159, 0.5647058824);
+  width: 100vw;
 }
 #iconService .overlay {
   position: absolute;

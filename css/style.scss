@@ -230,6 +230,7 @@ img {
 #iconService {
   position: relative;
   background: #073d9f90;
+  width: 100vw;
   .overlay {
     position: absolute;
     bottom: calc(100% + #{ptr(40)});

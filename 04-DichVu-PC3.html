@@ -203,11 +203,10 @@
                         </div>
                     </div>
                     <div class="btnCate">
-                        <a href="javascript://" title="Mục lục"
-                            onclick="$('#list_tableOfContents1').toggleClass('openCate')">
+                        <a href="javascript://" title="Mục lục" onclick="toggleDetail('list_tableOfContents1')">
                             <i class="far fa-list-ol"></i>
                         </a>
-                        <a href="" title="Cùng chuyên mục">
+                        <a href="javascript://" title="Cùng chuyên mục" onclick="toggleDetail('list_sameCate')">
                             <span class="icon">
                                 <img src="./pic/icoSameCate.png" alt="" loading="lazy">
                             </span>
@@ -226,6 +225,85 @@
                         </div>
                         <div class="list_tableOfContents">
 
+                        </div>
+                    </div>
+                    <div id="list_sameCate" class="fixRightDetail">
+                        <div class="title">
+                            <span class="icon">
+                                <img src="./pic/icoSameCate.png" alt="" loading="lazy">
+                            </span>
+                            <span class="text">Cùng chuyên mục</span>
+                            <span class="closeToggle" onclick="$('#list_sameCate').removeClass('openCate')">
+                                <i class="fal fa-times"></i>
+                            </span>
+                        </div>
+                        <div class="group">
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="wImage">
+                                    <a href="" title="" class="image cover">
+                                        <img src="./pic/p2.png" loading="lazy" alt="">
+                                    </a>
+                                </div>
+                                <div class="info">
+                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
+                                        nào?</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="noidung">
@@ -1178,15 +1256,24 @@
             ele.toggleClass("ac");
             ele.next().slideToggle();
         }
+        function toggleDetail(id) {
+            $this = $(`#${id}`);
+            if ($this.hasClass("openCate")) {
+                $('.fixRightDetail').removeClass('openCate');
+            } else {
+                $('.fixRightDetail').removeClass('openCate');
+                $this.addClass('openCate')
+            }
+        }
         $(window).scroll(function () {
             var offset = $("#news .detail .colLeft").offset().top;
-            var offset_Bottom = $("#news .detail .colLeft").offset().top + $("#news .detail .colLeft").height() - $("#list_tableOfContents1").height();
+            var offset_Bottom = $("#news .detail .colLeft").offset().top + $("#news .detail .colLeft").height() - $(".fixRightDetail").height();
             if ($(this).scrollTop() >= offset && $(this).scrollTop() <= offset_Bottom) {
-                $("#list_tableOfContents1").css({ "bottom": "auto", "top": $(this).scrollTop() - offset })
+                $(".fixRightDetail").css({ "bottom": "auto", "top": $(this).scrollTop() - offset })
             } else if ($(this).scrollTop() >= offset_Bottom) {
-                $("#list_tableOfContents1").css({ "bottom": "0", "top": "auto" })
+                $(".fixRightDetail").css({ "bottom": "0", "top": "auto" })
             } else {
-                $("#list_tableOfContents1").css({ "bottom": "auto", "top": "0" })
+                $(".fixRightDetail").css({ "bottom": "auto", "top": "0" })
             }
         })
 

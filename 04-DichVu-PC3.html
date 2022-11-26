@@ -239,71 +239,15 @@
                             </span>
                         </div>
                         <div class="group">
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
+                            <div class="item wow fadeInDown">
+                                <a href="" title="" class="name"><i class="far fa-angle-right"></i> Quản lý hoạt động
+                                    hàng không chung như thế
+                                    nào?</a>
                             </div>
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="wImage">
-                                    <a href="" title="" class="image cover">
-                                        <img src="./pic/p2.png" loading="lazy" alt="">
-                                    </a>
-                                </div>
-                                <div class="info">
-                                    <a href="" title="" class="name">Quản lý hoạt động hàng không chung như thế
-                                        nào?</a>
-                                </div>
+                            <div class="item wow fadeInDown">
+                                <a href="" title="" class="name"><i class="far fa-angle-right"></i> Quản lý hoạt động
+                                    hàng không chung như thế
+                                    nào?</a>
                             </div>
                         </div>
                     </div>
@@ -852,7 +796,8 @@
                                         <b>0908 308 123</b>
                                     </span>
                                 </a>
-                                <a href="" title="" class="btnPromise">
+                                <a href="javascript://" title="" class="btnPromise" data-bs-toggle="modal"
+                                    data-bs-target="#QuestionModal">
                                     <span class="icon">
                                         <img src="./pic/icoMail.png" alt="" loading="lazy">
                                     </span>
@@ -1223,9 +1168,8 @@
     <script src="js/loadHtml.js"></script>
 
     <script src="bootstrap/bootstrap.js"></script>
-    <script src="js/jquery.lazy.min.js"></script>
     <script src="js/Owl2/owl.carousel.min.js"></script>
-    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/wow.js"></script>
     <script src="js/Common.js"></script>
 
     <!--Đoạn code dưới này là để lấy danh sách mục lục tự động từ nội dung của bài-->
@@ -1289,7 +1233,7 @@
                     $(this).removeClass("active");
                 }
             });
-            if ($("#news .detail .noidung").offset().top + 20 < offsetWindow) {
+            if ($("#news .detail .noidung").offset().top < offsetWindow) {
                 $("#btn_tableOfContents1").addClass("ac");
             } else {
                 $("#btn_tableOfContents1").removeClass("ac");

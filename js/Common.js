@@ -1,4 +1,14 @@
-﻿//"use strict"; 
+﻿'use strict';
+
+const wow = new WOW(
+    {
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 100, // default 
+        live: true // default
+    }
+); wow.init();
+
 function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut, mouseDrag = true) {
     var option = {
         items: num,
@@ -100,7 +110,7 @@ $(document).ready(() => {
     // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
     $('#iconService:not(.inside) .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [8, 8, 8, 8, 8], "", ""));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 8, 8, 8], "", ""));
     });
     $('#iconService.inside .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [10, 10, 10, 10, 10], "", ""));
@@ -141,6 +151,22 @@ $(document).ready(() => {
         $(this).toggleClass("active");
         $(this).next("#searchForm").fadeToggle();
     })
+
+    $(".lstCate .cateRight").each(function () {
+        var width = $(this).width() - 20;
+        var lengthChild = $(this).find("li").length;
+        var lengthShow = width / 120;
+        if (lengthChild > lengthShow) {
+            $(this).parent().append(`<ul class="menuChild"></ul><a href="javascript://" class="toggleMenuChild"><i class="far fa-angle-right"></i></a>`)
+            for (var i = 0; i < lengthChild - lengthShow; i++) {
+                $(this).find("li:last-child()").appendTo($(this).parent().find(".menuChild"))
+            }
+        }
+    });
+    $(".toggleMenuChild").click(function () {
+        $(this).prev().slideToggle();
+        $(this).toggleClass("active");
+    });
 
     $(document).click(function (e) {
         if (!$("#searchForm").is(e.target) && $("#searchForm").has(e.target).length === 0 && !$("#toggleSearch").is(e.target) && $("#toggleSearch").has(e.target).length === 0) {

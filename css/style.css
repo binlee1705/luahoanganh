@@ -1524,7 +1524,6 @@ img {
 #iconService {
   position: relative;
   background: rgba(7, 61, 159, 0.5647058824);
-  width: 100vw;
 }
 #iconService .overlay {
   position: absolute;
@@ -1605,6 +1604,48 @@ img {
 }
 #iconService.inside .group .item .icon .text {
   font-size: 0.9375rem;
+}
+
+.lstCate {
+  position: relative;
+}
+.lstCate .toggleMenuChild {
+  display: flex;
+  justify-content: flex-end;
+  width: 1.25rem;
+}
+.lstCate .toggleMenuChild:hover {
+  color: #073d9f;
+}
+.lstCate .toggleMenuChild.active i:before {
+  content: "\f107";
+}
+.lstCate .menuChild {
+  display: none;
+  padding: 0;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: calc(100% + 0.3125rem);
+  right: 0;
+  background: #fff;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0.625rem 0.625rem rgba(0, 0, 0, 0.3764705882);
+  min-width: 12.5rem;
+  padding: 0.4375rem;
+}
+.lstCate .menuChild li * {
+  display: block;
+}
+.lstCate .menuChild li a {
+  margin: 0.4375rem 0;
+}
+.lstCate .menuChild li:hover a {
+  color: #073d9f;
+}
+.lstCate .menuChild li:last-child a {
+  margin-bottom: 0;
 }
 
 .homeService {
@@ -1694,10 +1735,14 @@ img {
 }
 .homeService .wrp .right .parent .lstCate .cateRight li {
   flex: auto;
+  font-size: 1rem;
 }
 .homeService .wrp .right .parent .lstCate .cateRight li > * {
   display: block;
   text-align: center;
+}
+.homeService .wrp .right .parent .lstCate .cateRight li:hover a {
+  color: #073d9f;
 }
 .homeService .wrp .right .parent .group {
   display: flex;
@@ -2760,7 +2805,6 @@ img {
 #news .lstCate .cateLeft {
   font-weight: bold;
   font-size: 1.875rem;
-  padding-right: 3.75rem;
   color: #073d9f;
 }
 #news .lstCate .cateLeft:hover {
@@ -2775,6 +2819,9 @@ img {
   display: flex;
   padding-left: 1.25rem;
   gap: 2.5rem;
+}
+#news .lstCate .cateRight li {
+  font-size: 1rem;
 }
 #news .lstCate .cateRight li > * {
   display: block;
@@ -3157,7 +3204,7 @@ img {
 #news .detail .colLeft .btnCate {
   position: -webkit-sticky;
   position: sticky;
-  top: 9.375rem;
+  top: 7.5rem;
   margin-left: -2.5rem;
   height: 8.75rem;
   width: 4.375rem;
@@ -3206,7 +3253,7 @@ img {
 #news .detail .colLeft .fixRightDetail {
   transition: none;
   position: absolute;
-  transition: 0.5s opacity ease-in-out, 0.5s left ease-in-out;
+  transition: 0.4s opacity ease-in-out, 0.4s left ease-in-out;
   top: 0;
   left: 0;
   opacity: 0;
@@ -3236,6 +3283,9 @@ img {
   width: 1.875rem;
   display: inline-flex;
   justify-content: flex-end;
+}
+#news .detail .colLeft .fixRightDetail .title .icon img {
+  height: 1.0625rem;
 }
 #news .detail .colLeft .fixRightDetail::-webkit-scrollbar {
   width: 6px;
@@ -3287,7 +3337,7 @@ img {
 #news .detail .colLeft #list_sameCate .group .item:not(:last-child) {
   padding-bottom: 0.625rem;
   margin-bottom: 0.625rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed #ccc;
 }
 #news .detail .colLeft #list_sameCate .group .item .wImage {
   width: 27.8481012658%;
@@ -3295,20 +3345,16 @@ img {
 #news .detail .colLeft #list_sameCate .group .item .wImage::before {
   padding-bottom: 66.3636363636%;
 }
-#news .detail .colLeft #list_sameCate .group .item .info {
-  flex: 1;
-  padding-left: 1.125rem;
-  display: flex;
-  flex-direction: column;
-}
-#news .detail .colLeft #list_sameCate .group .item .info .cateName {
-  font-size: 0.8125rem;
-  line-height: 1.625rem;
-}
-#news .detail .colLeft #list_sameCate .group .item .info .name {
+#news .detail .colLeft #list_sameCate .group .item .name {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1.4375rem;
+  display: flex;
+  align-items: baseline;
+}
+#news .detail .colLeft #list_sameCate .group .item .name i {
+  font-size: 0.875rem;
+  margin-right: 0.375rem;
 }
 #news .detail .colLeft #list_sameCate .group > .name {
   display: block;
@@ -3390,7 +3436,7 @@ img {
 }
 
 .newsHot .title {
-  font-size: 1.625rem;
+  font-size: 1.375rem;
   background: #073d9f;
   color: #fff;
   font-weight: bold;
@@ -3844,9 +3890,14 @@ img {
 #VideoPop .modal-dialog .wImage:before {
   padding-bottom: 56.25%;
 }
-#VideoPop .modal-dialog .wImage iframe {
+#VideoPop .modal-dialog .wImage #iframeYoutube {
   width: 100%;
   height: 100%;
+}
+
+.noidung {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 
 @-webkit-keyframes hotline-circle-anim {

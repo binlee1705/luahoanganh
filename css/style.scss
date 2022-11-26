@@ -230,7 +230,6 @@ img {
 #iconService {
   position: relative;
   background: #073d9f90;
-  width: 100vw;
   .overlay {
     position: absolute;
     bottom: calc(100% + #{ptr(40)});
@@ -323,6 +322,55 @@ img {
     }
   }
 }
+.lstCate {
+  position: relative;
+  .toggleMenuChild {
+    display: flex;
+    justify-content: flex-end;
+    width: ptr(20);
+    &:hover {
+      color: $color-hover;
+    }
+    &.active {
+      i:before {
+        content: "\f107";
+      }
+    }
+  }
+  .menuChild {
+    display: none;
+    padding: 0;
+    z-index: 5;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: calc(100% + #{ptr(5)});
+    right: 0;
+    background: #fff;
+    border-radius: ptr(5);
+    box-shadow: 0 ptr(10) ptr(10) #00000060;
+    min-width: ptr(200);
+    padding: ptr(7);
+    li {
+      * {
+        display: block;
+      }
+      a {
+        margin: ptr(7) 0;
+      }
+      &:hover {
+        a {
+          color: $color-hover;
+        }
+      }
+      &:last-child {
+        a {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
 .homeService {
   margin: 50px 0;
   .wrp {
@@ -406,9 +454,15 @@ img {
             padding-left: ptr(20);
             li {
               flex: auto;
+              font-size: ptr(16);
               > * {
                 display: block;
                 text-align: center;
+              }
+              &:hover {
+                a {
+                  color: $color-hover;
+                }
               }
             }
           }
@@ -1547,7 +1601,6 @@ img {
     .cateLeft {
       font-weight: bold;
       font-size: ptr(30);
-      padding-right: ptr(60);
       color: $color-hover;
       &:hover {
         color: $color-hover2;
@@ -1563,6 +1616,7 @@ img {
       padding-left: ptr(20);
       gap: ptr(40);
       li {
+        font-size: ptr(16);
         > * {
           display: block;
           text-align: center;
@@ -1972,7 +2026,7 @@ img {
       }
       .btnCate {
         position: sticky;
-        top: ptr(150);
+        top: ptr(120);
         margin-left: ptr(-40);
         height: ptr(140);
         width: ptr(70);
@@ -2021,7 +2075,7 @@ img {
       .fixRightDetail {
         transition: none;
         position: absolute;
-        transition: 0.5s opacity ease-in-out, 0.5s left ease-in-out;
+        transition: 0.4s opacity ease-in-out, 0.4s left ease-in-out;
         top: 0;
         left: 0;
         opacity: 0;
@@ -2049,6 +2103,11 @@ img {
             width: ptr(30);
             display: inline-flex;
             justify-content: flex-end;
+          }
+          .icon {
+            img {
+              height: ptr(17);
+            }
           }
         }
         &::-webkit-scrollbar {
@@ -2101,7 +2160,7 @@ img {
             &:not(:last-child) {
               padding-bottom: ptr(10);
               margin-bottom: ptr(10);
-              border-bottom: 1px solid #ccc;
+              border-bottom: 1px dashed #ccc;
             }
             .wImage {
               width: percent(110, 395);
@@ -2109,19 +2168,15 @@ img {
                 padding-bottom: wImage(73, 110);
               }
             }
-            .info {
-              flex: 1;
-              padding-left: ptr(18);
+            .name {
+              font-size: ptr(16);
+              font-weight: bold;
+              line-height: ptr(23);
               display: flex;
-              flex-direction: column;
-              .cateName {
-                font-size: ptr(13);
-                line-height: ptr(26);
-              }
-              .name {
-                font-size: ptr(16);
-                font-weight: bold;
-                line-height: ptr(23);
+              align-items: baseline;
+              i {
+                font-size: ptr(14);
+                margin-right: ptr(6);
               }
             }
           }
@@ -2211,7 +2266,7 @@ img {
 }
 .newsHot {
   .title {
-    font-size: ptr(26);
+    font-size: ptr(22);
     background: $color-hover;
     color: #fff;
     font-weight: bold;
@@ -2678,13 +2733,16 @@ img {
     &:before {
       padding-bottom: wImage(9, 16);
     }
-    iframe {
+    #iframeYoutube {
       width: 100%;
       height: 100%;
     }
   }
 }
-
+.noidung {
+  font-size: ptr(18);
+  line-height: ptr(27);
+}
 @import "css_rwd_common.css";
 @keyframes hotline-circle-anim {
   0% {

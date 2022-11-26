@@ -1227,7 +1227,7 @@
     <script src="js/jquery.marquee.min.js"></script>
     <script src="js/Common.js"></script>
 
-    <!--Đoạn code dưới này là để lấy danh sách mục lục tự động từ nội dung của bài, nếu không cần thiết (quản trị) thì xóa đi-->
+    <!--Đoạn code dưới này là để lấy danh sách mục lục tự động từ nội dung của bài-->
     <script>
         var arrayHeading = ["h1", "h2", "h3", "h4", "h5", "h6"];
         var htmtList = "";
@@ -1265,16 +1265,29 @@
                 $this.addClass('openCate')
             }
         }
+
         $(window).scroll(function () {
             var offset = $("#news .detail .colLeft").offset().top;
-            var offset_Bottom = $("#news .detail .colLeft").offset().top + $("#news .detail .colLeft").height() - $(".fixRightDetail").height();
-            if ($(this).scrollTop() >= offset && $(this).scrollTop() <= offset_Bottom) {
-                $(".fixRightDetail").css({ "bottom": "auto", "top": $(this).scrollTop() - offset })
-            } else if ($(this).scrollTop() >= offset_Bottom) {
+            var offsetWindow = $(this).scrollTop();
+            var offset_Bottom = offset + $("#news .detail .colLeft").height() - $(".fixRightDetail").height();
+            if (offsetWindow >= offset && offsetWindow <= offset_Bottom) {
+                $(".fixRightDetail").css({ "bottom": "auto", "top": offsetWindow - offset })
+            } else if (offsetWindow >= offset_Bottom) {
                 $(".fixRightDetail").css({ "bottom": "0", "top": "auto" })
             } else {
                 $(".fixRightDetail").css({ "bottom": "auto", "top": "0" })
             }
+            $(".list_tableOfContents li> a").each(function () {
+                var id = $(this).attr("href");
+                var dataOffset = $(`${id}`).offset().top;
+                if (offsetWindow + 10 > dataOffset) {
+                    $(this).parents("ul").prevAll(":has(a.active)").find($(".active")).removeClass("active");
+                    $(this).parents("ul").find($(".active")).removeClass("active");
+                    $(this).addClass("active");
+                } else {
+                    $(this).removeClass("active");
+                }
+            });
         })
 
     </script>

@@ -77,6 +77,11 @@ img {
   .wrp {
     display: flex;
     justify-content: space-between;
+    .logo {
+      img {
+        height: ptr(73);
+      }
+    }
     #menu {
       ul {
         min-height: 100%;
@@ -2052,12 +2057,17 @@ img {
           display: block;
           overflow: auto;
           > ul > li:not(:last-child) {
-            margin-bottom: ptr(10);
             border-bottom: 1px solid #ccc;
           }
           a {
             font-size: ptr(16);
             line-height: ptr(23);
+            padding: ptr(5);
+            margin-bottom: 0;
+            &.active {
+              background: $color-hover2;
+              color: #fff;
+            }
           }
           ul {
             padding-left: 0;

@@ -1383,6 +1383,9 @@ img {
   display: flex;
   justify-content: space-between;
 }
+#header .wrp .logo img {
+  height: 4.5625rem;
+}
 #header .wrp #menu ul {
   min-height: 100%;
   display: flex;
@@ -3241,12 +3244,17 @@ img {
   overflow: auto;
 }
 #news .detail .colLeft .fixRightDetail .list_tableOfContents > ul > li:not(:last-child) {
-  margin-bottom: 0.625rem;
   border-bottom: 1px solid #ccc;
 }
 #news .detail .colLeft .fixRightDetail .list_tableOfContents a {
   font-size: 1rem;
   line-height: 1.4375rem;
+  padding: 0.3125rem;
+  margin-bottom: 0;
+}
+#news .detail .colLeft .fixRightDetail .list_tableOfContents a.active {
+  background: #0ea8cc;
+  color: #fff;
 }
 #news .detail .colLeft .fixRightDetail .list_tableOfContents ul {
   padding-left: 0;

@@ -2055,6 +2055,157 @@ img {
 #staffHome.list .group .item:nth-child(2n) .wImage {
   flex: 1;
 }
+#staffHome.detail .content {
+  display: flex;
+  justify-content: space-between;
+}
+#staffHome.detail .content .left {
+  width: 37.8477306003%;
+}
+#staffHome.detail .content .left .wImage::before {
+  padding-bottom: 131.1411992263%;
+}
+#staffHome.detail .content .left .wImage .plug_view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  padding: 0.9375rem 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+#staffHome.detail .content .left .wImage .plug_view .plug {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+#staffHome.detail .content .left .wImage .plug_view .plug a {
+  width: 3.5625rem;
+  height: 3.5625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5625rem;
+  background: #6ecbe0;
+  color: #fff;
+  border-radius: 50%;
+}
+#staffHome.detail .content .left .wImage .plug_view .plug a:hover {
+  background: #073d9f;
+}
+#staffHome.detail .content .left .name {
+  margin: 1.875rem 0 2.1875rem 0;
+  color: #073d9f;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 500;
+}
+#staffHome.detail .content .left .name span:nth-child(2) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#staffHome.detail .content .left .info .top {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 500;
+}
+#staffHome.detail .content .left .info .top b {
+  font-weight: bold;
+}
+#staffHome.detail .content .left .info .bot {
+  list-style-position: inside;
+  font-size: 1.125rem;
+  padding-left: 0;
+}
+#staffHome.detail .content .left .info .bot li {
+  list-style-type: "•";
+  margin-top: 1.875rem;
+}
+#staffHome.detail .content .left .info .bot li::marker {
+  font-size: 1.125rem;
+}
+#staffHome.detail .content .right {
+  width: 58.9311859444%;
+}
+#staffHome.detail .lstBtn {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+  margin-top: 3.125rem;
+  margin-bottom: 3.75rem;
+}
+#staffHome.detail .lstBtn .btnPromise {
+  width: calc(100% - 5rem/ 3);
+  display: flex;
+  align-items: center;
+  background: #0ea8cc;
+  color: #fff;
+  height: 4.375rem;
+  justify-content: center;
+  border-radius: 0.4375rem;
+}
+#staffHome.detail .lstBtn .btnPromise .icon {
+  margin-right: 0.9375rem;
+  font-size: 1.75rem;
+}
+#staffHome.detail .lstBtn .btnPromise .text {
+  font-size: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#staffHome.detail .lstBtn .btnPromise .text span {
+  font-size: 0.875rem;
+}
+#staffHome.detail .lstBtn .btnPromise .text b {
+  font-size: 1.125rem;
+  margin-top: -0.125rem;
+}
+#staffHome.detail .lstBtn .btnPromise:hover {
+  background: #073d9f;
+}
+#staffHome.detail .other {
+  margin-top: 1.875rem;
+}
+#staffHome.detail .other .cateName {
+  font-size: 1.875rem;
+  padding-bottom: 0.4375rem;
+  border-bottom: 1px solid #073d9f;
+  color: #073d9f;
+  font-weight: bold;
+  display: block;
+}
+#staffHome.detail .other .groupOther {
+  padding: 1.875rem;
+}
+#staffHome.detail .other .groupOther .itemOther .wImage::before {
+  padding-bottom: 100%;
+}
+#staffHome.detail .other .groupOther .itemOther .info {
+  margin-top: 0.625rem;
+}
+#staffHome.detail .other .groupOther .itemOther .info .name {
+  display: flex;
+  justify-content: center;
+}
+#staffHome.detail .other .groupOther .itemOther .info .name a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5625rem;
+  font-weight: 500;
+  line-height: 2.1875rem;
+}
+#staffHome.detail .other .groupOther .itemOther .info .name a span:nth-child(2) {
+  font-weight: bold;
+}
 
 #introduce .wrp {
   display: flex;
@@ -2460,75 +2611,6 @@ img {
 #contact .content .left {
   width: 63.6896046852%;
 }
-#contact .content .left .formContact {
-  background: #f7f9fb;
-  padding: 1.5625rem 2.5rem 3.375rem 2.5rem;
-}
-#contact .content .left .formContact .titleForm {
-  font-weight: bold;
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1.25rem;
-  line-height: 2.8125rem;
-}
-#contact .content .left .formContact input[type=text],
-#contact .content .left .formContact textarea {
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #cccccc;
-  margin-bottom: 1.875rem;
-  padding: 0 1.25rem;
-  height: 3.4375rem;
-  font-size: 1rem;
-  margin-top: 0;
-}
-#contact .content .left .formContact textarea {
-  padding: 1.25rem;
-  resize: none;
-  min-height: 10rem;
-}
-#contact .content .left .formContact .file {
-  display: flex;
-  align-items: center;
-}
-#contact .content .left .formContact .file label {
-  height: 2.8125rem;
-  border: 2px solid #0ea8cc;
-  border-radius: 0.4375rem;
-  padding: 0 0.9375rem;
-  font-size: 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-right: 0.9375rem;
-}
-#contact .content .left .formContact .file label input {
-  position: absolute;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
-#contact .content .left .formContact .file label:hover {
-  background: #073d9f;
-  border-color: #073d9f;
-  color: #fff;
-}
-#contact .content .left .formContact .btnSend {
-  outline: none;
-  border-radius: 0.4375rem;
-  background: #0ea8cc;
-  display: block;
-  text-align: center;
-  margin-top: 2.5rem;
-  line-height: 3.4375rem;
-  font-size: 1.5rem;
-  color: #fff;
-}
-#contact .content .left .formContact .btnSend:hover {
-  background: #073d9f;
-}
 #contact .content .right {
   width: 34.0409956076%;
   display: flex;
@@ -2586,6 +2668,76 @@ img {
 #contact .map iframe {
   width: 100%;
   height: 100%;
+}
+
+.formContact {
+  background: #f7f9fb;
+  padding: 1.5625rem 2.5rem 3.375rem 2.5rem;
+}
+.formContact .titleForm {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 2.8125rem;
+}
+.formContact input[type=text],
+.formContact textarea {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  margin-bottom: 1.875rem;
+  padding: 0 1.25rem;
+  height: 3.4375rem;
+  font-size: 1rem;
+  margin-top: 0;
+}
+.formContact textarea {
+  padding: 1.25rem;
+  resize: none;
+  min-height: 10rem;
+}
+.formContact .file {
+  display: flex;
+  align-items: center;
+}
+.formContact .file label {
+  height: 2.8125rem;
+  border: 2px solid #0ea8cc;
+  border-radius: 0.4375rem;
+  padding: 0 0.9375rem;
+  font-size: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0.9375rem;
+}
+.formContact .file label input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.formContact .file label:hover {
+  background: #073d9f;
+  border-color: #073d9f;
+  color: #fff;
+}
+.formContact .btnSend {
+  outline: none;
+  border-radius: 0.4375rem;
+  background: #0ea8cc;
+  display: block;
+  text-align: center;
+  margin-top: 2.5rem;
+  line-height: 3.4375rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.formContact .btnSend:hover {
+  background: #073d9f;
 }
 
 #news.list {
@@ -3315,6 +3467,28 @@ img {
 #activity .wrp .group .owl-nav .owl-prev:hover {
   background: transparent;
   color: #fff;
+}
+
+#QuestionModal {
+  width: 45.31%;
+  max-width: calc(100% - 2.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+#QuestionModal .modal-dialog {
+  max-width: none;
+}
+#QuestionModal .modal-dialog .modal-body {
+  padding: 0;
+}
+#QuestionModal .modal-dialog .modal-body .titleForm {
+  margin-top: 0.9375rem;
+  margin-bottom: 2.5rem;
+}
+#QuestionModal .modal-dialog button {
+  position: absolute;
+  right: 0.9375rem;
+  top: 0.9375rem;
 }
 
 @-webkit-keyframes hotline-circle-anim {

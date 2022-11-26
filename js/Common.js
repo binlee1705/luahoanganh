@@ -94,6 +94,9 @@ $(document).ready(() => {
             $(this).parent('li').addClass('active').siblings().removeClass('active');
             e.preventDefault();
         });
+    $('.modal').on('shown.bs.modal', function () {
+        $(this).trigger('focus')
+    })
     // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
     $('#iconService:not(.inside) .group').each(function () {
@@ -110,6 +113,9 @@ $(document).ready(() => {
     });
     $('#partner .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 40, 40, 40, 40], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
+    });
+    $('#staffHome.detail .other .groupOther').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [80, 80, 80, 80, 80, 80], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
     });
     $('#activity .group').each(function () {
         if ($(this).find(">*").length > 1) {

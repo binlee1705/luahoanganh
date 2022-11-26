@@ -203,7 +203,8 @@
                         </div>
                     </div>
                     <div class="btnCate">
-                        <a href="javascript://" title="Mục lục" onclick="toggleDetail('list_tableOfContents1')">
+                        <a href="javascript://" title="Mục lục" onclick="toggleDetail('list_tableOfContents1')"
+                            id="btn_tableOfContents1">
                             <i class="far fa-list-ol"></i>
                         </a>
                         <a href="javascript://" title="Cùng chuyên mục" onclick="toggleDetail('list_sameCate')">
@@ -1288,6 +1289,11 @@
                     $(this).removeClass("active");
                 }
             });
+            if ($("#news .detail .noidung").offset().top + 20 < offsetWindow) {
+                $("#btn_tableOfContents1").addClass("ac");
+            } else {
+                $("#btn_tableOfContents1").removeClass("ac");
+            }
         })
 
     </script>

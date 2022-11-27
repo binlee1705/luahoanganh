@@ -154,19 +154,19 @@ $(document).ready(() => {
     // $(".marquee").marquee({ duration: 20000, gap: 20, delayBeforeStart: 0, direction: "left", duplicated: true, pauseOnHover: true });
 
     $('#iconService:not(.inside) .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 8, 8, 8], "", ""));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 6, 5, 4], "", ""));
     });
     $('#iconService.inside .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [10, 10, 10, 10, 10], "", ""));
     });
     $('#iconService2 .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 9, 9, 9, 9], "", "", true));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 8, 6, 6, 4], "", "", true));
     });
     $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut", false));
     });
     $('#customer .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 5, 5, 5, 5], "fadeIn", "fadeOut"));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 4, 4, 4, 3], "fadeIn", "fadeOut"));
     });
     $('#partner .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 40, 40, 40, 40], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
@@ -199,19 +199,14 @@ $(document).ready(() => {
         $(this).next(".searchForm").fadeToggle();
     })
 
-    $(".lstCate .cateRight").each(function () {
-        var width = $(this).width() - 20;
-        var lengthChild = $(this).find("li").length;
-        var lengthShow = width / 120;
-        if (lengthChild > lengthShow) {
-            $(this).parent().append(`<ul class="menuChild"></ul><a href="javascript://" class="toggleMenuChild"><i class="far fa-angle-right"></i></a>`)
-            for (var i = 0; i < lengthChild - lengthShow; i++) {
-                $(this).find("li:last-child()").appendTo($(this).parent().find(".menuChild"))
-            }
-        }
-    });
+    setCateChild();
     $(".toggleMenuChild").click(function () {
         $(this).prev().slideToggle();
+        $(this).toggleClass("active");
+    });
+
+    $("#footer .right .group .nameCate i").click(function () {
+        $(this).parent().next(".list").slideToggle();
         $(this).toggleClass("active");
     });
 
@@ -222,7 +217,17 @@ $(document).ready(() => {
         }
     });
 });
-
+$(window).resize(function () {
+    setCateChild();
+    var wWinDow = $(window).width();
+    if (wWinDow > 479) {
+        $("#footer .group .list").show();
+        $("#footer .nameCate i").removeClass("active");
+    } else {
+        $("#footer .group .list").hide();
+        $("#footer .nameCate i").removeClass("active");
+    }
+})
 
 function animationChar(ele, animationIn = "in", animationOut = "out", split = 1) {
     if (split === 1) {
@@ -252,6 +257,26 @@ function animationChar(ele, animationIn = "in", animationOut = "out", split = 1)
     }, 4000);
 }
 
+function setCateChild() {
+    $(".lstCate .cateRight").each(function () {
+        const $this = $(this);
+        if ($this.next(".menuChild").length > 0) {
+            $this.next(".menuChild").find("li").each(function () {
+                $(this).appendTo($this);
+            })
+            $this.parent(".lstCate").find(".menuChild,.toggleMenuChild").remove();
+        }
+        var width = $this.width() - 20;
+        var lengthChild = $this.find("li").length;
+        var lengthShow = width / 120;
+        if (lengthChild > lengthShow) {
+            $this.parent().append(`<ul class="menuChild"></ul><a href="javascript://" class="toggleMenuChild"><i class="far fa-angle-right"></i></a>`)
+            for (var i = 0; i < lengthChild - lengthShow; i++) {
+                $this.find("li:last-child()").appendTo($this.parent().find(".menuChild"))
+            }
+        }
+    });
+}
 var size = parseInt($(".noidung").css("font-size")),
     lineheight = parseInt($(".noidung").css("line-height"));
 size || (size = 16);

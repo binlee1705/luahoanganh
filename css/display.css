@@ -862,175 +862,6 @@ h6 {
 }
 
 /*-----------Common end--------*/
-.thongke {
-  background: #f0f0f0;
-  color: #000;
-  font-size: ptr(13);
-  padding: ptr(10) ptr(15);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 3px;
-}
-.thongke .lstLeft {
-  display: flex;
-  align-items: center;
-}
-.thongke .lstLeft > * {
-  margin-right: ptr(15);
-}
-.thongke .lstLeft > *:last-child {
-  margin-right: 0;
-}
-.thongke .cochu {
-  display: flex;
-  align-items: center;
-}
-.thongke .cochu span {
-  margin-right: ptr(10);
-}
-.thongke .cochu span:first-child {
-  cursor: pointer;
-}
-.thongke .cochu span:first-child:hover {
-  color: #0d6efd;
-}
-.thongke .cochu .btnSize {
-  width: ptr(25);
-  height: ptr(25);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  margin: 0 ptr(2);
-  font-size: ptr(14);
-}
-.thongke .plugDetail {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-}
-.thongke .plugDetail li {
-  margin-left: ptr(20);
-  font-size: ptr(17);
-}
-.thongke a:hover {
-  color: blue;
-}
-
-.noidung {
-  line-height: ptr(24);
-  min-height: ptr(50);
-  text-align: justify;
-  width: 100%;
-  font-size: 1rem;
-  padding: ptr(10);
-}
-.noidung * {
-  max-width: 100%;
-}
-.noidung img {
-  display: block !important;
-  height: auto !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung input[type=image] {
-  display: block !important;
-  height: auto !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung iframe {
-  display: block !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung video {
-  display: block !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung table {
-  margin: auto;
-}
-.noidung figcaption {
-  text-align: center;
-}
-.noidung .wImage iframe {
-  height: 100%;
-  width: 100%;
-}
-.noidung h1 {
-  display: block;
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-.noidung h2 {
-  display: block;
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-.noidung h3 {
-  display: block;
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-.noidung h4 {
-  display: block;
-  margin: 1.33em 0;
-}
-.noidung h5 {
-  display: block;
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-.noidung h6 {
-  display: block;
-  font-size: 0.67em;
-  margin: 2.33em 0;
-}
-.noidung span {
-  display: inline-block;
-}
-
-.noidung.sapo {
-  font-weight: bold;
-  padding-bottom: 0;
-}
-
-.noidung1 img {
-  display: block !important;
-  height: auto !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung1 input[type=image] {
-  display: block !important;
-  height: auto !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung1 iframe {
-  display: block !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung1 video {
-  display: block !important;
-  margin: auto;
-  max-width: 100%;
-}
-.noidung1 span {
-  display: inline-block;
-}
-
-.noidung.clip .wImage:before {
-  padding-bottom: 56.23%;
-}
-
 .tab-content .tab {
   display: none;
 }
@@ -1114,4 +945,102 @@ a span {
 
 span a {
   transition: none;
+}
+
+.noidung {
+  width: 100%;
+  min-height: 100px;
+  text-align: justify;
+  line-height: ptr(24);
+}
+.noidung * {
+  max-width: 100%;
+}
+.noidung img {
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  display: block !important;
+}
+.noidung input[type=image] {
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  display: block !important;
+}
+.noidung iframe {
+  max-width: 100%;
+  margin: auto;
+  display: block !important;
+}
+.noidung video {
+  max-width: 100%;
+  margin: auto;
+  display: block !important;
+}
+.noidung table {
+  margin: auto;
+}
+.noidung figcaption {
+  text-align: center;
+}
+.noidung .wImage iframe {
+  width: 100%;
+  height: 100%;
+}
+.noidung h1 {
+  display: block;
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+.noidung h2 {
+  display: block;
+  margin: 0.83em 0;
+  font-size: 1.5em;
+}
+.noidung h3 {
+  display: block;
+  margin: 1em 0;
+  font-size: 1.17em;
+}
+.noidung h4 {
+  display: block;
+  margin: 1.33em 0;
+}
+.noidung h5 {
+  display: block;
+  margin: 1.67em 0;
+  font-size: 0.83em;
+}
+.noidung h6 {
+  display: block;
+  margin: 2.33em 0;
+  font-size: 0.67em;
+}
+
+.noidung1 img {
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  display: block !important;
+}
+.noidung1 input[type=image] {
+  max-width: 100%;
+  height: auto !important;
+  margin: auto;
+  display: block !important;
+}
+.noidung1 iframe {
+  max-width: 100%;
+  margin: auto;
+  display: block !important;
+}
+.noidung1 video {
+  max-width: 100%;
+  margin: auto;
+  display: block !important;
+}
+
+.noidung.clip .wImage:before {
+  padding-bottom: 56.23%;
 }/*# sourceMappingURL=display.css.map */

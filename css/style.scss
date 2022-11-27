@@ -709,21 +709,16 @@ img {
       }
 
       &::-webkit-scrollbar {
-        width: 6px;
+        width: ptr(6);
       }
 
-      /* Track */
       &::-webkit-scrollbar-track {
         background: #404040;
       }
-
-      /* Handle */
       &::-webkit-scrollbar-thumb {
         background: #9c9d9e;
         border-radius: 100px;
       }
-
-      /* Handle on hover */
       &::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
@@ -808,10 +803,14 @@ img {
       width: calc((100% - #{ptr(160)}) / 3);
       border: 1px solid #0ea8cc;
       border-radius: 7px;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       a {
         display: flex;
-        height: 52px;
+        padding: ptr(14) ptr(10);
+        width: 100%;
         font-size: ptr(18);
         font-weight: 500;
         align-items: center;
@@ -1272,6 +1271,9 @@ img {
             bottom: 0;
             left: 0;
           }
+          i {
+            display: none;
+          }
         }
         .list {
           padding: 0;
@@ -1310,12 +1312,13 @@ img {
   }
 }
 #afterFoot {
-  padding: ptr(13) 0 ptr(15) 0;
+  padding: ptr(13) ptr(10) ptr(15) ptr(10);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #ffffff60;
   background: $color-hover;
+  text-align: center;
 }
 #contactChat {
   position: fixed;
@@ -2898,7 +2901,6 @@ img {
 .modal {
   top: ptr(70);
 }
-@import "css_rwd_common.css";
 @keyframes hotline-circle-anim {
   0% {
     transform: rotate(0) scale(0.5) skew(1deg);
@@ -2950,4 +2952,3 @@ img {
     transform: rotate(0) scale(1) skew(1deg);
   }
 }
-@import "css_rwd.scss";

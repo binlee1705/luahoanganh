@@ -1,9 +1,10 @@
 @charset "UTF-8";
 @import "css_rwd_common.css";
-#activity .wrp .group .owl-nav .owl-prev, #partner .wrp .group .owl-nav .owl-prev, #staffHome .group .owl-nav .owl-prev, #iconService .group .owl-nav .owl-prev,
+#activity .wrp .group .owl-nav .owl-prev, #partner .wrp .group .owl-nav .owl-prev, #staffHome .group .owl-nav .owl-prev, #iconService2 .group .owl-nav .owl-prev, #iconService .group .owl-nav .owl-prev,
 #activity .wrp .group .owl-nav .owl-next,
 #partner .wrp .group .owl-nav .owl-next,
 #staffHome .group .owl-nav .owl-next,
+#iconService2 .group .owl-nav .owl-next,
 #iconService .group .owl-nav .owl-next {
   position: absolute;
   top: 50%;
@@ -19,10 +20,11 @@
   color: #000;
   border-radius: 0 0.3125rem 0.3125rem 0;
 }
-#activity .wrp .group .owl-nav .owl-prev:before, #partner .wrp .group .owl-nav .owl-prev:before, #staffHome .group .owl-nav .owl-prev:before, #iconService .group .owl-nav .owl-prev:before,
+#activity .wrp .group .owl-nav .owl-prev:before, #partner .wrp .group .owl-nav .owl-prev:before, #staffHome .group .owl-nav .owl-prev:before, #iconService2 .group .owl-nav .owl-prev:before, #iconService .group .owl-nav .owl-prev:before,
 #activity .wrp .group .owl-nav .owl-next:before,
 #partner .wrp .group .owl-nav .owl-next:before,
 #staffHome .group .owl-nav .owl-next:before,
+#iconService2 .group .owl-nav .owl-next:before,
 #iconService .group .owl-nav .owl-next:before {
   font-family: "FontAwesome";
   font-weight: 900;
@@ -31,6 +33,7 @@
 #activity .wrp .group .owl-nav .owl-next.owl-next,
 #partner .wrp .group .owl-nav .owl-next.owl-next,
 #staffHome .group .owl-nav .owl-next.owl-next,
+#iconService2 .group .owl-nav .owl-next.owl-next,
 #iconService .group .owl-nav .owl-next.owl-next {
   left: auto;
   right: 0;
@@ -39,13 +42,15 @@
 #activity .wrp .group .owl-nav .owl-next.owl-next:before,
 #partner .wrp .group .owl-nav .owl-next.owl-next:before,
 #staffHome .group .owl-nav .owl-next.owl-next:before,
+#iconService2 .group .owl-nav .owl-next.owl-next:before,
 #iconService .group .owl-nav .owl-next.owl-next:before {
   content: "\f054";
 }
-#activity .wrp .group .owl-nav .owl-prev:hover, #partner .wrp .group .owl-nav .owl-prev:hover, #staffHome .group .owl-nav .owl-prev:hover, #iconService .group .owl-nav .owl-prev:hover,
+#activity .wrp .group .owl-nav .owl-prev:hover, #partner .wrp .group .owl-nav .owl-prev:hover, #staffHome .group .owl-nav .owl-prev:hover, #iconService2 .group .owl-nav .owl-prev:hover, #iconService .group .owl-nav .owl-prev:hover,
 #activity .wrp .group .owl-nav .owl-next:hover,
 #partner .wrp .group .owl-nav .owl-next:hover,
 #staffHome .group .owl-nav .owl-next:hover,
+#iconService2 .group .owl-nav .owl-next:hover,
 #iconService .group .owl-nav .owl-next:hover {
   background: rgb(255, 255, 255);
 }
@@ -1383,8 +1388,25 @@ img {
   display: flex;
   justify-content: space-between;
 }
+#header .wrp .right {
+  position: relative;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+#header .wrp .logo {
+  flex: 1;
+}
 #header .wrp .logo img {
   height: 4.5625rem;
+  max-width: 100%;
+}
+#header .wrp #menu {
+  transition: 0.5s all ease-in-out;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 #header .wrp #menu ul {
   min-height: 100%;
@@ -1462,7 +1484,17 @@ img {
   box-shadow: 0.9375rem 0 0.3125rem rgba(0, 0, 0, 0.2);
 }
 #header.fixTop .wrp .logo img {
-  height: 2.5rem;
+  height: 3.125rem;
+}
+#header.fixTop.fixTop.fixService #iconService2 {
+  pointer-events: all;
+  transform: translate3d(0, -50%, 0);
+  opacity: 1;
+}
+#header.fixTop.fixTop.fixService #menu {
+  transform: translate3d(0, 100%, 0);
+  opacity: 0;
+  pointer-events: none;
 }
 
 #toggleSearch {
@@ -1610,6 +1642,50 @@ img {
 }
 #iconService.inside .group .item .icon .text {
   font-size: 0.9375rem;
+}
+
+#iconService2 {
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transition: 0.5s all ease-in-out;
+  transform: translate3d(0, -100%, 0);
+}
+#iconService2 .group .item > a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#iconService2 .group .item > a .icon {
+  position: relative;
+  top: 0;
+  transition: 0.2s all linear;
+}
+#iconService2 .group .item > a .icon img {
+  height: 1.5625rem;
+  filter: brightness(0%);
+}
+#iconService2 .group .item > a .text {
+  font-size: 0.875rem;
+}
+#iconService2 .group .item:hover > a .icon {
+  -webkit-animation: 3s wobble infinite;
+          animation: 3s wobble infinite;
+}
+#iconService2 .group .item:hover > a .text {
+  color: #073d9f;
+}
+#iconService2 .group .owl-nav .owl-next,
+#iconService2 .group .owl-nav .owl-prev {
+  background: transparent;
+  color: #99a9cb;
+}
+#iconService2 .group .owl-nav .owl-next:hover,
+#iconService2 .group .owl-nav .owl-prev:hover {
+  background: rgba(17, 17, 17, 0.5647058824);
 }
 
 .lstCate {

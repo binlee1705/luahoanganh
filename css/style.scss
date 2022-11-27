@@ -77,12 +77,27 @@ img {
   .wrp {
     display: flex;
     justify-content: space-between;
+    .right {
+      position: relative;
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
     .logo {
+      flex: 1;
       img {
         height: ptr(73);
+        max-width: 100%;
       }
     }
+    .right {
+    }
     #menu {
+      transition: 0.5s all ease-in-out;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
       ul {
         min-height: 100%;
         display: flex;
@@ -170,8 +185,20 @@ img {
     .wrp {
       .logo {
         img {
-          height: ptr(40);
+          height: ptr(50);
         }
+      }
+    }
+    &.fixTop.fixService {
+      #iconService2 {
+        pointer-events: all;
+        transform: translate3d(0, -50%, 0);
+        opacity: 1;
+      }
+      #menu {
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        pointer-events: none;
       }
     }
   }
@@ -327,6 +354,59 @@ img {
           .text {
             font-size: ptr(15);
           }
+        }
+      }
+    }
+  }
+}
+#iconService2 {
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transition: 0.5s all ease-in-out;
+  transform: translate3d(0, -100%, 0);
+  .group {
+    .item {
+      > a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+          position: relative;
+          top: 0;
+          transition: 0.2s all linear;
+          img {
+            height: ptr(25);
+            filter: brightness(0%);
+          }
+        }
+        .text {
+          font-size: ptr(14);
+        }
+      }
+      &:hover {
+        > a {
+          .icon {
+            animation: 3s wobble infinite;
+          }
+          .text {
+            color: $color-hover;
+          }
+        }
+      }
+    }
+    .owl-nav {
+      @extend %owl-nav;
+      .owl-next,
+      .owl-prev {
+        background: transparent;
+        color: #99a9cb;
+        &:hover {
+          background: #11111190;
         }
       }
     }

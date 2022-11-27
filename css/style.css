@@ -3375,7 +3375,9 @@ img {
   pointer-events: none;
   width: calc(var(--widthWrp) - 100% - 1.875rem);
   min-width: 14.375rem;
-  height: calc(100vh - 2.75rem);
+  max-height: calc(100vh - 3.375rem);
+  box-shadow: 0rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.4375rem;
   background: #f2f2f2;
   z-index: 6;
   padding: 0.625rem 0.9375rem;

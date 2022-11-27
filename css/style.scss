@@ -2206,7 +2206,9 @@ img {
         pointer-events: none;
         width: calc(var(--widthWrp) - 100% - #{ptr(30)});
         min-width: ptr(230);
-        height: calc(100vh - #{ptr(44)});
+        max-height: calc(100vh - #{ptr(54)});
+        box-shadow: ptr(0) ptr(5) ptr(10) rgba(0, 0, 0, 0.3);
+        border-radius: ptr(7);
         background: #f2f2f2;
         z-index: 6;
         padding: ptr(10) ptr(15);

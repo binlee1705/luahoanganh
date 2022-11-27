@@ -81,7 +81,7 @@ $(window).scroll(function () {
         var hHeader = $("#header").height();
         var offset = $("#news .detail .colLeft").offset().top;
         var offset_Bottom = offset + $("#news .detail .colLeft").height() - $(".fixRightDetail").height();
-        if (offsetWindow >= offset && offsetWindow <= offset_Bottom) {
+        if (offsetWindow >= offset - hHeader && offsetWindow <= offset_Bottom) {
             $(".fixRightDetail").css({ "bottom": "auto", "top": offsetWindow - offset + hHeader + 10 })
         } else if (offsetWindow >= offset_Bottom) {
             $(".fixRightDetail").css({ "bottom": "0", "top": "auto" })

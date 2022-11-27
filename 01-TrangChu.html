@@ -4,8 +4,8 @@
 <head>
     <title>Trang chủ</title>
     <meta charset="utf-8" />
-    <!-- <meta name="MobileOptimized" content="device-width" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" /> -->
+    <meta name="MobileOptimized" content="device-width" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <!--CSS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +19,6 @@
     <link href="js/Owl2/owl.carousel.css" rel="stylesheet" />
     <link href="js/Lightbox/lightbox.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <!-- <link href="css/css_rwd.css" rel="stylesheet" /> -->
 
 </head>
 
@@ -70,10 +69,10 @@
                             <a href="" title="">Liên hệ</a>
                         </li>
                         <li>
-                            <a href="javascript://" title="" id="toggleSearch">
+                            <a href="javascript://" title="" class="toggleSearch">
                                 <i class="far fa-search"></i>
                             </a>
-                            <div id="searchForm">
+                            <div class="searchForm">
                                 <div>
                                     <input type="text" class="ipt" placeholder="Nhập từ khoá">
                                     <a href="javascript://" class="btnSearch"><i class="far fa-search"></i></a>
@@ -195,6 +194,15 @@
                             </span>
                             <span class="text">Dự án đầu tư</span>
                         </a>
+                    </div>
+                </div>
+                <a href="javascript://" title="" class="toggleSearch">
+                    <i class="far fa-search"></i>
+                </a>
+                <div class="searchForm">
+                    <div>
+                        <input type="text" class="ipt" placeholder="Nhập từ khoá">
+                        <a href="javascript://" class="btnSearch"><i class="far fa-search"></i></a>
                     </div>
                 </div>
             </div>
@@ -1495,13 +1503,16 @@
         <a href="" title="">
             <img src="./pic/messenger.png" alt="" loading="lazy">
         </a>
-        <div class="hotline-phone hotline-green">
-            <div class="hotline-ph-circle"></div>
-            <div class="hotline-ph-circle-fill"></div>
-            <div class="hotline-ph-img-circle">
+        <a href="tel:0908308123" class="hotline-phone hotline-green">
+            <span class="hotline-ph-circle"></span>
+            <span class="hotline-ph-circle-fill"></span>
+            <span class="hotline-ph-img-circle">
                 <i class="fas fa-phone-alt"></i>
-            </div>
-        </div>
+            </span>
+            <span class="text">
+                0908 308 123
+            </span>
+        </a>
     </div>
     <div class="modal fade" id="QuestionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -1394,7 +1394,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
 }
 #header .wrp .logo {
   flex: 1;
@@ -1404,9 +1403,10 @@ img {
   max-width: 100%;
 }
 #header .wrp #menu {
-  transition: 0.5s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   transform: translate3d(0, 0, 0);
   opacity: 1;
+  height: 100%;
 }
 #header .wrp #menu ul {
   min-height: 100%;
@@ -1422,7 +1422,8 @@ img {
   align-items: center;
 }
 #header .wrp #menu ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 1.125rem;
 }
@@ -1460,9 +1461,6 @@ img {
   opacity: 1;
   visibility: visible;
 }
-#header .wrp #menu ul li #searchForm {
-  display: none;
-}
 #header .wrp #menu ul li.active {
   color: #073d9f;
 }
@@ -1496,16 +1494,17 @@ img {
   opacity: 0;
   pointer-events: none;
 }
-
-#toggleSearch {
+#header .toggleSearch {
   width: 0.8125rem;
   text-align: center;
 }
-#toggleSearch.active i::before {
+#header .toggleSearch:hover {
+  color: #073d9f;
+}
+#header .toggleSearch.active i::before {
   content: "\f00d";
 }
-
-#searchForm {
+#header .searchForm {
   position: absolute;
   top: 120%;
   right: 0;
@@ -1515,25 +1514,26 @@ img {
   width: 28.0625rem;
   height: 2.3125rem;
   border: 1px solid #cccccc;
+  display: none;
 }
-#searchForm > div {
+#header .searchForm > div {
   display: flex;
 }
-#searchForm > div .ipt {
+#header .searchForm > div .ipt {
   flex: 1;
   border: none;
   outline: none;
   height: 2.1875rem;
   padding: 0 0.625rem;
 }
-#searchForm > div .btnSearch {
+#header .searchForm > div .btnSearch {
   height: 2.3125rem;
   width: 2.5rem;
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
 }
-#searchForm > div .btnSearch:hover {
+#header .searchForm > div .btnSearch:hover {
   background: #073d9f;
   color: #fff;
 }
@@ -1650,8 +1650,13 @@ img {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  transition: 0.5s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   transform: translate3d(0, -100%, 0);
+  display: flex;
+  align-items: center;
+}
+#iconService2 .group {
+  width: 97%;
 }
 #iconService2 .group .item > a {
   display: flex;
@@ -1670,6 +1675,7 @@ img {
 }
 #iconService2 .group .item > a .text {
   font-size: 0.875rem;
+  white-space: nowrap;
 }
 #iconService2 .group .item:hover > a .icon {
   -webkit-animation: 3s wobble infinite;
@@ -1686,6 +1692,11 @@ img {
 #iconService2 .group .owl-nav .owl-next:hover,
 #iconService2 .group .owl-nav .owl-prev:hover {
   background: rgba(17, 17, 17, 0.5647058824);
+}
+#iconService2 .toggleSearch {
+  width: 3%;
+  text-align: right;
+  font-size: 1rem;
 }
 
 .lstCate {
@@ -1731,7 +1742,7 @@ img {
 }
 
 .homeService {
-  margin: 50px 0;
+  margin: 3.125rem 0;
 }
 .homeService .wrp {
   display: flex;
@@ -1991,7 +2002,7 @@ img {
 #homeService2 .wrp .parent .cateName {
   display: block;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.625rem;
   margin-bottom: 0.75rem;
   color: #073d9f;
 }
@@ -2564,6 +2575,7 @@ img {
   transition: all 0.5s;
 }
 #contactChat .hotline-phone {
+  position: relative;
   background-color: transparent;
   width: 3.8125rem;
   height: 3.8125rem;
@@ -2585,6 +2597,27 @@ img {
 #contactChat .hotline-phone .hotline-ph-circle {
   border-color: #fe3a48;
   opacity: 0.5;
+}
+#contactChat .hotline-phone .text {
+  font-size: 1.375rem;
+  background: url(../pic/bgHotlineFoot.png) center no-repeat;
+  background-size: 100% 100%;
+  padding: 0rem 2.5rem 0 1.5625rem;
+  position: absolute;
+  right: 100%;
+  color: #fff;
+  white-space: nowrap;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  line-height: 2.6875rem;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  pointer-events: none;
+}
+#contactChat .hotline-phone:hover .text {
+  opacity: 1;
+  pointer-events: all;
 }
 #contactChat .hotline-ph-circle-fill {
   width: calc(100% + 1.25rem);
@@ -4005,6 +4038,10 @@ img {
   line-height: 1.5;
 }
 
+.modal {
+  top: 4.375rem;
+}
+
 @-webkit-keyframes hotline-circle-anim {
   0% {
     transform: rotate(0) scale(0.5) skew(1deg);
@@ -4110,7 +4147,7 @@ img {
 }
 @media (max-width: 1366px) {
   :root {
-    font-size: 0.875rem;
+    font-size: 13px;
   }
 }
 @media (max-width: 1199px) {

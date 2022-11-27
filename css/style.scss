@@ -83,7 +83,6 @@ img {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      justify-content: center;
     }
     .logo {
       flex: 1;
@@ -92,12 +91,11 @@ img {
         max-width: 100%;
       }
     }
-    .right {
-    }
     #menu {
-      transition: 0.5s all ease-in-out;
+      transition: 0.3s all ease-in-out;
       transform: translate3d(0, 0, 0);
       opacity: 1;
+      height: 100%;
       ul {
         min-height: 100%;
         display: flex;
@@ -110,7 +108,8 @@ img {
           display: flex;
           align-items: center;
           a {
-            display: block;
+            display: flex;
+            align-items: center;
             font-weight: bold;
             font-size: ptr(18);
           }
@@ -151,9 +150,6 @@ img {
               opacity: 1;
               visibility: visible;
             }
-          }
-          #searchForm {
-            display: none;
           }
           &.active {
             color: $color-hover;
@@ -202,48 +198,53 @@ img {
       }
     }
   }
-}
-#toggleSearch {
-  width: ptr(13);
-  text-align: center;
-  &.active {
-    i::before {
-      content: "\f00d";
+  .toggleSearch {
+    width: ptr(13);
+    text-align: center;
+    &:hover {
+      color: $color-hover;
+    }
+    &.active {
+      i::before {
+        content: "\f00d";
+      }
     }
   }
-}
-#searchForm {
-  position: absolute;
-  top: 120%;
-  right: 0;
-  background: #fff;
-  border-radius: 5px;
-  overflow: hidden;
-  width: ptr(449);
-  height: ptr(37);
-  border: 1px solid #cccccc;
-  > div {
-    display: flex;
-    .ipt {
-      flex: 1;
-      border: none;
-      outline: none;
-      height: ptr(35);
-      padding: 0 ptr(10);
-    }
-    .btnSearch {
-      height: ptr(37);
-      width: ptr(40);
-      display: inline-flex !important;
-      align-items: center;
-      justify-content: center;
-      &:hover {
-        background: $color-hover;
-        color: #fff;
+  .searchForm {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: ptr(449);
+    height: ptr(37);
+    border: 1px solid #cccccc;
+    display: none;
+    > div {
+      display: flex;
+      .ipt {
+        flex: 1;
+        border: none;
+        outline: none;
+        height: ptr(35);
+        padding: 0 ptr(10);
+      }
+      .btnSearch {
+        height: ptr(37);
+        width: ptr(40);
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background: $color-hover;
+          color: #fff;
+        }
       }
     }
   }
 }
+
 #slide {
   position: relative;
   .wImage {
@@ -365,9 +366,12 @@ img {
   pointer-events: none;
   position: absolute;
   top: 50%;
-  transition: 0.5s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   transform: translate3d(0, -100%, 0);
+  display: flex;
+  align-items: center;
   .group {
+    width: 97%;
     .item {
       > a {
         display: flex;
@@ -386,6 +390,7 @@ img {
         }
         .text {
           font-size: ptr(14);
+          white-space: nowrap;
         }
       }
       &:hover {
@@ -410,6 +415,11 @@ img {
         }
       }
     }
+  }
+  .toggleSearch {
+    width: 3%;
+    text-align: right;
+    font-size: ptr(16);
   }
 }
 .lstCate {
@@ -462,7 +472,7 @@ img {
   }
 }
 .homeService {
-  margin: 50px 0;
+  margin: ptr(50) 0;
   .wrp {
     display: flex;
     justify-content: space-between;
@@ -736,7 +746,7 @@ img {
       .cateName {
         display: block;
         font-weight: bold;
-        font-size: 26px;
+        font-size: ptr(26);
         margin-bottom: ptr(12);
         color: $color-hover;
         &:hover {
@@ -1341,6 +1351,7 @@ img {
   }
 
   .hotline-phone {
+    position: relative;
     background-color: transparent;
     width: ptr(61);
     height: ptr(61);
@@ -1364,6 +1375,29 @@ img {
     .hotline-ph-circle {
       border-color: #fe3a48;
       opacity: 0.5;
+    }
+    .text {
+      font-size: ptr(22);
+      background: url(../pic/bgHotlineFoot.png) center no-repeat;
+      background-size: 100% 100%;
+      padding: ptr(0) ptr(40) 0 ptr(25);
+      position: absolute;
+      right: 100%;
+      color: #fff;
+      white-space: nowrap;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      line-height: ptr(43);
+      opacity: 0;
+      transition: 0.3s all ease-in-out;
+      pointer-events: none;
+    }
+    &:hover {
+      .text {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 
@@ -2858,6 +2892,9 @@ img {
     font-weight: bold;
     line-height: 1.5;
   }
+}
+.modal {
+  top: ptr(70);
 }
 @import "css_rwd_common.css";
 @keyframes hotline-circle-anim {

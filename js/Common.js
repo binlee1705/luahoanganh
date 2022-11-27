@@ -160,7 +160,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [10, 10, 10, 10, 10], "", ""));
     });
     $('#iconService2 .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 8, 8, 8], "", "", true));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 9, 9, 9, 9], "", "", true));
     });
     $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut", false));
@@ -194,9 +194,9 @@ $(document).ready(() => {
         animationChar($(this))
     })
 
-    $("html").on("click", "#toggleSearch", function () {
+    $("html").on("click", ".toggleSearch", function () {
         $(this).toggleClass("active");
-        $(this).next("#searchForm").fadeToggle();
+        $(this).next(".searchForm").fadeToggle();
     })
 
     $(".lstCate .cateRight").each(function () {
@@ -216,9 +216,9 @@ $(document).ready(() => {
     });
 
     $(document).click(function (e) {
-        if (!$("#searchForm").is(e.target) && $("#searchForm").has(e.target).length === 0 && !$("#toggleSearch").is(e.target) && $("#toggleSearch").has(e.target).length === 0) {
-            $("#searchForm").fadeOut();
-            $("#toggleSearch").removeClass("active");
+        if (!$(".searchForm").is(e.target) && $(".searchForm").has(e.target).length === 0 && !$(".toggleSearch").is(e.target) && $(".toggleSearch").has(e.target).length === 0) {
+            $(".searchForm").fadeOut();
+            $(".toggleSearch").removeClass("active");
         }
     });
 });

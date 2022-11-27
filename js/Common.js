@@ -69,7 +69,43 @@ function scrollHead(event) {
     event.preventDefault();
     $('body,html').animate({ scrollTop: 0 }, 1600);
 }
+$(window).scroll(function () {
+    var offsetWindow = $(this).scrollTop();
+    if (offsetWindow > 0) {
+        $("#header").addClass("fixTop");
+    } else {
+        $("#header").removeClass("fixTop");
+    }
 
+    if ($("#news .detail .colLeft").length > 0) {
+        var hHeader = $("#header").height();
+        var offset = $("#news .detail .colLeft").offset().top;
+        var offset_Bottom = offset + $("#news .detail .colLeft").height() - $(".fixRightDetail").height();
+        if (offsetWindow >= offset && offsetWindow <= offset_Bottom) {
+            $(".fixRightDetail").css({ "bottom": "auto", "top": offsetWindow - offset + hHeader + 10 })
+        } else if (offsetWindow >= offset_Bottom) {
+            $(".fixRightDetail").css({ "bottom": "0", "top": "auto" })
+        } else {
+            $(".fixRightDetail").css({ "bottom": "auto", "top": "0" })
+        }
+        $(".list_tableOfContents li> a").each(function () {
+            var id = $(this).attr("href");
+            var dataOffset = $(`${id}`).offset().top;
+            if (offsetWindow + 10 > dataOffset) {
+                $(this).parents("ul").prevAll(":has(a.active)").find($(".active")).removeClass("active");
+                $(this).parents("ul").find($(".active")).removeClass("active");
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+        if ($("#news .detail .noidung").offset().top < offsetWindow) {
+            $("#btn_tableOfContents1").addClass("ac");
+        } else {
+            $("#btn_tableOfContents1").removeClass("ac");
+        }
+    }
+});
 $(document).ready(() => {
     $('#bttop').click(function (e) {
         scrollHead(e);
@@ -113,7 +149,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 8, 8, 8], "", ""));
     });
     $('#iconService.inside .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [10, 10, 10, 10, 10], "", ""));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [10, 10, 10, 10, 10], "", ""));
     });
     $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut", false));

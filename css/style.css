@@ -1458,6 +1458,12 @@ img {
   left: 100%;
   position: absolute;
 }
+#header.fixTop {
+  box-shadow: 0.9375rem 0 0.3125rem rgba(0, 0, 0, 0.2);
+}
+#header.fixTop .wrp .logo img {
+  height: 2.5rem;
+}
 
 #toggleSearch {
   width: 0.8125rem;
@@ -3260,7 +3266,7 @@ img {
   pointer-events: none;
   width: calc(var(--widthWrp) - 100% - 1.875rem);
   min-width: 14.375rem;
-  height: 100vh;
+  height: calc(100vh - 2.75rem);
   background: #f2f2f2;
   z-index: 6;
   padding: 0.625rem 0.9375rem;
@@ -3333,6 +3339,7 @@ img {
   display: flex;
   margin-bottom: 1.25rem;
   align-items: center;
+  transform: translate3d(-100%, 0, 0);
 }
 #news .detail .colLeft #list_sameCate .group .item:not(:last-child) {
   padding-bottom: 0.625rem;
@@ -3369,6 +3376,10 @@ img {
 #news .detail .colLeft #list_sameCate .group > .name:last-child {
   padding-bottom: 0;
   border-bottom: none;
+}
+#news .detail .colLeft #list_sameCate.openCate .group .item {
+  -webkit-animation: 0.5s var(--delayAnimation) fadeInLeft forwards;
+          animation: 0.5s var(--delayAnimation) fadeInLeft forwards;
 }
 #news .detail .colRight {
   width: 28.9165446559%;
@@ -3898,6 +3909,23 @@ img {
 .noidung {
   font-size: 1.125rem;
   line-height: 1.6875rem;
+}
+.noidung h2 {
+  font-size: 1.6875rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.noidung h3 {
+  font-size: 1.4375rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #0000ff;
+}
+.noidung h4,
+.noidung h5,
+.noidung h6 {
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 @-webkit-keyframes hotline-circle-anim {

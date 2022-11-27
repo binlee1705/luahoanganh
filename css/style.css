@@ -3908,7 +3908,7 @@ img {
 
 .noidung {
   font-size: 1.125rem;
-  line-height: 1.6875rem;
+  line-height: 1.5;
 }
 .noidung h2 {
   font-size: 1.6875rem;
@@ -3917,7 +3917,7 @@ img {
 }
 .noidung h3 {
   font-size: 1.4375rem;
-  line-height: 1.2;
+  line-height: 1.5;
   font-weight: bold;
   color: #0000ff;
 }
@@ -3925,7 +3925,7 @@ img {
 .noidung h5,
 .noidung h6 {
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 @-webkit-keyframes hotline-circle-anim {

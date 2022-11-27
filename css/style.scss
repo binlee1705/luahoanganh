@@ -2759,7 +2759,7 @@ img {
 }
 .noidung {
   font-size: ptr(18);
-  line-height: ptr(27);
+  line-height: 1.5;
   h2 {
     font-size: ptr(27);
     line-height: 1.2;
@@ -2767,7 +2767,7 @@ img {
   }
   h3 {
     font-size: ptr(23);
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: bold;
     color: #0000ff;
   }
@@ -2775,7 +2775,7 @@ img {
   h5,
   h6 {
     font-weight: bold;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 }
 @import "css_rwd_common.css";

@@ -119,6 +119,17 @@
       }
     }
   }
+  #VideoPop .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+  }
+  #QuestionModal,
+  #VideoPop {
+    width: 80vw;
+    max-width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 991px) {
@@ -1223,5 +1234,8 @@
   }
   .list_tableOfContents ul {
     padding-left: ptr(10);
+  }
+  #QuestionModal {
+    width: calc(100vw - #{ptr(20)});
   }
 }

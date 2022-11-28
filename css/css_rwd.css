@@ -643,6 +643,7 @@
   #quesAns .wrp .nameCate a {
     padding: 0 1.25rem;
     font-size: 1.875rem;
+    white-space: nowrap;
   }
   #quesAns .wrp .group {
     gap: 1.25rem;

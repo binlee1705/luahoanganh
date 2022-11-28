@@ -104,16 +104,14 @@
   }
   #QuestionModal,
 #VideoPop {
-    width: 80vw;
+    width: 90vw;
     max-width: 100vw;
     left: 50%;
     transform: translateX(-50%);
   }
-  #footer {
-    font-size: 0.9375rem;
-  }
-  #footer .wrp .right .group .list li a {
-    font-size: 0.9375rem;
+  #footer .wrp .left {
+    width: 40%;
+    padding-right: 1.875rem;
   }
 }
 @media (max-width: 991px) {
@@ -413,6 +411,15 @@
   }
   #news.list .detail .colRight .newsHot .group:has(.wImage) .item {
     width: calc((100% - 1.25rem) / 2);
+  }
+  #footer {
+    font-size: 0.9375rem;
+  }
+  #footer .wrp .left {
+    width: 100%;
+  }
+  #footer .wrp .right .group .list li a {
+    font-size: 0.9375rem;
   }
 }
 @media (max-width: 767px) {

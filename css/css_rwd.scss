@@ -125,16 +125,16 @@
   }
   #QuestionModal,
   #VideoPop {
-    width: 80vw;
+    width: 90vw;
     max-width: 100vw;
     left: 50%;
     transform: translateX(-50%);
   }
   #footer {
-    font-size: ptr(15);
     .wrp {
-      .right .group .list li a {
-        font-size: ptr(15);
+      .left {
+        width: 40%;
+        padding-right: ptr(30);
       }
     }
   }
@@ -511,6 +511,17 @@
             }
           }
         }
+      }
+    }
+  }
+  #footer {
+    font-size: ptr(15);
+    .wrp {
+      .left {
+        width: 100%;
+      }
+      .right .group .list li a {
+        font-size: ptr(15);
       }
     }
   }

@@ -53,11 +53,31 @@
   .wrp {
     max-width: calc(100vw - 2.5rem);
   }
+  .wrp .wrp {
+    width: 100%;
+  }
   #slide #iconService .overlay {
     display: none;
   }
   #iconService .group .item > a .text {
     font-size: 0.9375rem;
+  }
+  #aboutUs .noidung {
+    padding: 1.875rem;
+  }
+  #header {
+    display: none;
+  }
+  #contact .content .left {
+    width: 60%;
+  }
+  #contact .content .right {
+    width: 38%;
+  }
+  #news.list .detail .colLeft .btnCate {
+    margin-right: -4.375rem;
+    margin-left: 0;
+    float: right;
   }
 }
 @media (max-width: 991px) {
@@ -138,6 +158,23 @@
   }
   #staffHome .group .item .info .name a span:first-child {
     margin-bottom: 0.3125rem;
+  }
+  #staffHome.list.detail .content .left .name {
+    font-size: 2.1875rem;
+    line-height: 3.1875rem;
+    margin: 1.25rem 0;
+    margin-bottom: 0;
+  }
+  #staffHome.list.detail .lstBtn {
+    margin: 2.5rem 0;
+    gap: 1.25rem;
+  }
+  #staffHome.list.detail .lstBtn .btnPromise {
+    width: calc((100% - 2.5rem) / 3);
+    height: 3.75rem;
+  }
+  #staffHome.list.detail .lstBtn .btnPromise .text {
+    font-size: 1.5625rem;
   }
   #introduce .wrp .left {
     padding: 1.25rem;
@@ -260,6 +297,59 @@
   }
   .newest .wrp:has(.newsHot) .left .group .item .cont, .newest .wrp:has(.commonBanner) .left .group .item .cont {
     display: none;
+  }
+  #promise .wrp .content,
+#promise .wrp .lstBtn {
+    width: 100%;
+    padding: 0 1.875rem;
+  }
+  #activity .wrp .group {
+    width: 70%;
+  }
+  #activity .wrp .group .item .name {
+    font-size: 1.5625rem;
+    margin-top: 0.625rem;
+  }
+  #contact .content {
+    flex-direction: column-reverse;
+  }
+  #contact .content .left {
+    width: 100%;
+  }
+  #contact .content .right {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  #contact .content .right .item {
+    width: calc((100% - 2.5rem) / 3);
+    min-height: auto;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    padding: 0.9375rem;
+  }
+  #contact .content .right .item .icon {
+    margin-bottom: 1.25rem;
+  }
+  #contact .content .right .item .info {
+    flex: none;
+    margin-left: 0;
+  }
+  #contact .content .right .item .info b {
+    margin-bottom: 0.625rem;
+  }
+  #contact .content .right .item .info span {
+    flex: none;
+    margin-top: 0;
+  }
+  #contact .content .right .item .info .hotline {
+    font-size: 1.875rem;
   }
 }
 @media (max-width: 767px) {
@@ -553,6 +643,42 @@
     width: 100%;
     padding-left: 0;
   }
+  #prize .wrp .cateName {
+    font-size: 1.875rem;
+  }
+  #activity .wrp .cateName {
+    font-size: 1.875rem;
+  }
+  #activity .wrp .group {
+    width: 100%;
+  }
+  #staffHome.list .group .item {
+    margin-bottom: 1.25rem;
+  }
+  #staffHome.list .group .item .info .plug_view .btnView {
+    width: auto;
+    padding: 0 2.5rem;
+    height: 2.5rem;
+  }
+  #staffHome.list .group .item:nth-child(2n) {
+    flex-direction: column;
+  }
+  #staffHome.list .group .item:nth-child(2n) .wImage {
+    width: 100%;
+    flex: none;
+  }
+  #staffHome.list .group .item:nth-child(2n) .info {
+    width: 100%;
+  }
+  #staffHome.detail .content {
+    flex-direction: column;
+  }
+  #staffHome.detail .content .left {
+    width: 100%;
+  }
+  #staffHome.detail .content .right {
+    width: 100%;
+  }
 }
 @media (max-width: 479px) {
   #quesAns {
@@ -738,5 +864,98 @@
   }
   .newest .wrp .left .group .item .info .cont {
     display: block;
+  }
+  #aboutUs .noidung {
+    background: none;
+    padding: 0;
+  }
+  #aboutUs .noidung .profile {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 1.25rem 0;
+  }
+  #promise {
+    margin-top: 2.5rem;
+  }
+  #promise .wrp {
+    padding: 1.875rem 0.625rem;
+  }
+  #promise .wrp .nameCate {
+    position: static;
+    transform: none;
+    margin-bottom: 1.25rem;
+  }
+  #promise .wrp .content {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  #promise .wrp .content .main {
+    width: 100%;
+    padding: 0;
+    margin-top: 1.25rem;
+  }
+  #promise .wrp .lstBtn {
+    padding: 0;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  #promise .wrp .lstBtn > a {
+    width: 100%;
+  }
+  #promise .wrp .info {
+    padding: 0;
+  }
+  #prize .wrp .group {
+    gap: 0.9375rem;
+  }
+  #prize .wrp .group .wImage {
+    width: calc((100% - 0.9375rem) / 2);
+  }
+  #activity .wrp .group {
+    width: 100%;
+  }
+  #activity .wrp .group .owl-nav .owl-next,
+#activity .wrp .group .owl-nav .owl-prev {
+    font-size: 1.875rem;
+  }
+  #partner .wrp .cateName {
+    font-size: 1.875rem;
+  }
+  #staffHome.list.detail .lstBtn {
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+  #staffHome.list.detail .lstBtn .btnPromise {
+    width: 100%;
+    height: 3.125rem;
+  }
+  #staffHome.list.detail .lstBtn .btnPromise .text {
+    font-size: 1.25rem;
+  }
+  #contact .content {
+    flex-direction: column;
+  }
+  #contact .content .right {
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 0.625rem;
+    margin-top: 0.625rem;
+  }
+  #contact .content .right .item {
+    flex-direction: row;
+    margin-top: 0.625rem;
+    width: 100%;
+  }
+  #contact .content .right .item .icon {
+    font-size: 2.5rem;
+  }
+  #contact .content .right .item .info {
+    flex: 1;
+    padding-left: 1.25rem;
+  }
+  .formContact {
+    padding: 1.875rem 1.25rem;
   }
 }/*# sourceMappingURL=css_rwd.css.map */

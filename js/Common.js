@@ -169,18 +169,16 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [10, 10, 10, 10, 10, 0], true, true, true, [5, 4, 4, 4, 3], "fadeIn", "fadeOut"));
     });
     $('#partner .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 40, 40, 40, 40], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [40, 40, 20, 20, 20, 40], true, true, true, [3, 3, 3, 2, 1], "fadeIn", "fadeOut"));
     });
     $('#staffHome.detail .other .groupOther').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [80, 80, 80, 80, 80, 80], true, true, true, [3, 3, 3, 3, 3], "fadeIn", "fadeOut"));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [80, 80, 40, 30, 30, 40], true, true, true, [3, 3, 3, 2, 1], "fadeIn", "fadeOut"));
     });
     $('#activity .group').each(function () {
         if ($(this).find(">*").length > 1) {
             $(this).owlCarousel({
                 items: 1,
-                center: true,
                 loop: true,
-                stagePadding: 30,
                 autoplay: true,
                 autoplayTimeout: 5000,
                 smartSpeed: 1000,
@@ -220,7 +218,7 @@ $(document).ready(() => {
 $(window).resize(function () {
     setCateChild();
     var wWinDow = $(window).width();
-    if (wWinDow > 479) {
+    if (wWinDow > 767) {
         $("#footer .group .list").show();
         $("#footer .nameCate i").removeClass("active");
     } else {

@@ -138,9 +138,17 @@
       }
     }
   }
-  .lstCate .toggleMenuChild {
-    font-size: ptr(20);
-    width: ptr(40);
+  .lstCate {
+    .toggleMenuChild {
+      font-size: ptr(20);
+      width: ptr(40);
+    }
+    .menuChild {
+      li a {
+        font-size: ptr(15);
+        margin: ptr(10) 0;
+      }
+    }
   }
 }
 

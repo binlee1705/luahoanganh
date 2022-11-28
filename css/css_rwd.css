@@ -117,6 +117,10 @@
     font-size: 1.25rem;
     width: 2.5rem;
   }
+  .lstCate .menuChild li a {
+    font-size: 0.9375rem;
+    margin: 0.625rem 0;
+  }
 }
 @media (max-width: 991px) {
   #iconService .group {

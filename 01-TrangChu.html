@@ -223,7 +223,7 @@
     <div id="slide">
         <div class="wImage">
             <a href="javascript://" title="" class="image cover">
-                <video loop autoplay muted>
+                <video id="videoBanner" loop muted>
                     <source src="./pic/Banner.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -1628,6 +1628,8 @@
         $('#VideoPop').on('hidden.bs.modal', function () {
             $("#iframeYoutube").attr("src", '');
         });
+        var vid = document.getElementById("videoBanner");
+        vid.play();
     </script>
     <!--
         Note:

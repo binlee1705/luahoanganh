@@ -22,8 +22,8 @@
     height: calc(100vh - 4rem);
     z-index: 21;
     padding: 0;
-    background: #0ea8cc;
-    color: #fff;
+    background: #fff;
+    color: #333;
     top: 4rem;
     left: -100%;
     font-size: 1.25rem;
@@ -48,12 +48,16 @@
   }
   #header .wrp #menu ul li {
     display: flex;
+    padding: 0 0.625rem 0 1.25rem;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   #header .wrp #menu ul li.active {
     background: #073d9f !important;
     color: #fff !important;
+  }
+  #header .wrp #menu ul li:hover a {
+    color: #333 !important;
   }
   #header .wrp #menu ul li a {
     background: transparent !important;

@@ -1652,6 +1652,9 @@
     <script>
         if ($(window).width() < 1366) {
             $(".fixRightDetail").width($("#news .detail .colRight").width());
+            $("#list_tableOfContents1").on("click", ".list_tableOfContents a", function () {
+                $("#list_tableOfContents1").removeClass("openCate");
+            })
         }
         var arrayHeading = ["h1", "h2", "h3", "h4", "h5", "h6"];
         var htmtList = "";

@@ -1080,7 +1080,7 @@
   }
   #botMobile {
     padding: 0 ptr(5);
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -1114,6 +1114,11 @@
     }
   }
   #news {
+    .lstCate {
+      .cateLeft a {
+        font-size: ptr(25);
+      }
+    }
     &.list {
       .detail {
         .colRight {
@@ -1340,11 +1345,12 @@
   #promise {
     margin-top: ptr(40);
     .wrp {
-      padding: ptr(30) ptr(10);
+      padding: ptr(10) !important;
       .nameCate {
         position: static;
         transform: none;
         margin-bottom: ptr(20);
+        white-space: nowrap;
       }
       .content {
         padding: 0;

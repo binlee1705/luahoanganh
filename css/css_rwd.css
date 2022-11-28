@@ -889,7 +889,8 @@
   }
   #botMobile {
     padding: 0 0.3125rem;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -916,6 +917,9 @@
   }
   #quesAns .wrp .group .name {
     width: 100%;
+  }
+  #news .lstCate .cateLeft a {
+    font-size: 1.5625rem;
   }
   #news.list .detail .colRight .newsHot .group:has(.wImage) .item {
     width: 100%;
@@ -1112,12 +1116,13 @@
     margin-top: 2.5rem;
   }
   #promise .wrp {
-    padding: 1.875rem 0.625rem;
+    padding: 0.625rem !important;
   }
   #promise .wrp .nameCate {
     position: static;
     transform: none;
     margin-bottom: 1.25rem;
+    white-space: nowrap;
   }
   #promise .wrp .content {
     padding: 0;

@@ -160,7 +160,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 6, 5, 4], "", ""));
     });
     $('#iconService2 .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 8, 6, 6, 4], "", "", true));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 8, 6, 4, 3], "", "", true));
     });
     $('#staffHome:not(.list) .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], true, true, true, [1, 1, 1, 1, 1], "fadeIn", "fadeOut", false));

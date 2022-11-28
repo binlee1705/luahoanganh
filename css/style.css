@@ -1186,8 +1186,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-#header .wrp .logo {
   flex: 1;
 }
 #header .wrp .logo img {

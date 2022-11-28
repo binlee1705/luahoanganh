@@ -11,14 +11,156 @@
   :root {
     font-size: 14px;
   }
+  #header {
+    .wrp {
+      align-items: center;
+      .logo {
+        img {
+          height: 3.125rem;
+        }
+      }
+      #menu {
+        transform: none !important;
+        opacity: 1 !important;
+        position: fixed;
+        width: 80vw;
+        height: calc(100vh - #{ptr(64)});
+        z-index: 21;
+        padding: 0;
+        background: $color-hover2;
+        color: #fff;
+        top: ptr(64);
+        left: -100%;
+        font-size: ptr(20);
+        text-transform: uppercase;
+        pointer-events: all !important;
+        ul {
+          z-index: 21;
+          transition: 0.3s all ease-in-out;
+          display: block;
+          padding: ptr(20) 0;
+          .openSub {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: ptr(50);
+            font-size: ptr(20);
+
+            &.ac {
+              i:before {
+                content: "\f106";
+              }
+            }
+          }
+          li {
+            display: flex;
+            justify-content: space-between;
+            &.active,
+            &:not(:has(.searchForm)):hover {
+              background: $color-hover !important;
+              color: #fff !important;
+            }
+            a {
+              background: transparent !important;
+              &:after {
+                display: none;
+              }
+              display: flex;
+              padding: ptr(10) ptr(22);
+              align-items: center;
+              justify-content: flex-start;
+              flex-direction: row;
+              border-right: none;
+              flex: 1;
+
+              span.icon {
+                width: ptr(25);
+                display: inline-block;
+                margin: 0;
+                margin-right: ptr(10);
+
+                img {
+                  display: block;
+                  margin: auto;
+                }
+              }
+            }
+
+            &:hover {
+              > ul {
+                display: none;
+              }
+
+              > a {
+                background: transparent;
+                color: #fff;
+              }
+            }
+            flex-wrap: wrap;
+            ul {
+              text-transform: none;
+              visibility: visible;
+              opacity: 1;
+              pointer-events: all;
+              padding: 0;
+              padding-left: ptr(20);
+              transition: none;
+              height: auto;
+              display: none;
+              width: 100%;
+              position: static;
+              background: transparent;
+              li {
+                a {
+                  padding: ptr(10);
+                  white-space: normal;
+                  > i {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .toggleSearch {
+              display: none;
+            }
+          }
+        }
+        &.ac {
+          left: 0;
+        }
+        .searchForm {
+          display: block !important;
+          position: static;
+          margin-top: ptr(10);
+          height: ptr(40);
+          width: 100%;
+          > div {
+            width: 100%;
+            .btnSearch {
+              flex: none;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+  #iconService2 {
+    .group {
+      width: 100%;
+    }
+    .toggleSearch {
+      display: none;
+    }
+  }
   .openList {
     display: block;
     width: 35px;
     margin-left: ptr(15);
     hr {
       -moz-transition: 0.5s all ease-in-out;
-      background: #fff;
-      border: 1px solid #fff;
+      background: #333;
+      border: 1px solid #333;
       transition: 0.5s all ease-in-out;
       z-index: 98;
       opacity: 1;
@@ -26,7 +168,6 @@
       &:first-child {
         margin-top: 0;
       }
-
       &:last-child {
         margin-bottom: 0;
       }
@@ -39,14 +180,14 @@
       }
       hr:nth-child(1) {
         -moz-transform: rotate(135deg) translateX(5px) translateY(-8px);
-        background: #fff;
-        border-color: #fff;
+        background: #333;
+        border-color: #333;
         transform: rotate(135deg) translateX(5px) translateY(-8px);
       }
       hr:nth-child(3) {
         -moz-transform: rotate(-135deg) translateX(6px) translateY(8px);
-        background: #fff;
-        border-color: #fff;
+        background: #333;
+        border-color: #333;
         transform: rotate(-135deg) translateX(7px) translateY(10px);
       }
     }
@@ -75,9 +216,7 @@
       padding: ptr(30);
     }
   }
-  #header {
-    display: none;
-  }
+
   #contact .content {
     .left {
       width: 60%;

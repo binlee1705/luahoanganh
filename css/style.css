@@ -1483,7 +1483,7 @@ img {
 }
 #iconService2 .group .owl-nav .owl-next:hover,
 #iconService2 .group .owl-nav .owl-prev:hover {
-  background: rgba(17, 17, 17, 0.5647058824);
+  background: transparent;
 }
 #iconService2 .toggleSearch {
   width: 3%;

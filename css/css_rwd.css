@@ -51,7 +51,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  #header .wrp #menu ul li.active, #header .wrp #menu ul li:not(:has(.searchForm)):hover {
+  #header .wrp #menu ul li.active {
     background: #073d9f !important;
     color: #fff !important;
   }
@@ -115,6 +115,7 @@
   #header .wrp #menu .searchForm {
     display: block !important;
     position: static;
+    opacity: 1 !important;
     margin-top: 0.625rem;
     height: 2.5rem;
     width: 100%;
@@ -125,6 +126,11 @@
   #header .wrp #menu .searchForm > div .btnSearch {
     flex: none;
     color: #333;
+  }
+  #iconService2 {
+    pointer-events: all !important;
+    transform: translate3d(0, -50%, 0) !important;
+    opacity: 1 !important;
   }
   #iconService2 .group {
     width: 100%;
@@ -1166,5 +1172,9 @@
   }
   #QuestionModal {
     width: calc(100vw - 1.25rem);
+  }
+  #header .wrp #menu ul li a {
+    padding-left: 0;
+    padding-right: 0;
   }
 }/*# sourceMappingURL=css_rwd.css.map */

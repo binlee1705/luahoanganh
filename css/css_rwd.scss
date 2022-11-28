@@ -55,8 +55,7 @@
           li {
             display: flex;
             justify-content: space-between;
-            &.active,
-            &:not(:has(.searchForm)):hover {
+            &.active {
               background: $color-hover !important;
               color: #fff !important;
             }
@@ -131,6 +130,7 @@
         .searchForm {
           display: block !important;
           position: static;
+          opacity: 1 !important;
           margin-top: ptr(10);
           height: ptr(40);
           width: 100%;
@@ -146,6 +146,9 @@
     }
   }
   #iconService2 {
+    pointer-events: all !important;
+    transform: translate3d(0, -50%, 0) !important;
+    opacity: 1 !important;
     .group {
       width: 100%;
     }
@@ -1408,5 +1411,21 @@
   }
   #QuestionModal {
     width: calc(100vw - #{ptr(20)});
+  }
+  #header {
+    .wrp {
+      #menu {
+        ul {
+          li {
+            a {
+              padding: {
+                left: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

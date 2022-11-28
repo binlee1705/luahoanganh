@@ -1405,6 +1405,7 @@ img {
   font-size: 1.25rem;
   color: #cfeef5;
   margin-top: 0.625rem;
+  white-space: nowrap;
 }
 #iconService .group .item:hover > a .icon {
   -webkit-animation: 3s wobble infinite;
@@ -2952,6 +2953,7 @@ img {
 #news.list .newsGroup.newsStyle4 .type2 ul {
   display: flex;
   gap: 3.75rem;
+  flex-wrap: wrap;
 }
 #news.list .newsGroup.newsStyle4 .type2 ul li {
   width: calc((100% - 7.5rem) / 3);
@@ -3367,6 +3369,7 @@ img {
 .newsHot .group .item {
   display: flex;
   margin-bottom: 1.25rem;
+  align-items: flex-start;
 }
 .newsHot .group .item .wImage {
   width: 27.8481012658%;

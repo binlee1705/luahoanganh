@@ -315,6 +315,7 @@ img {
           font-size: ptr(20);
           color: #cfeef5;
           margin-top: ptr(10);
+          white-space: nowrap;
         }
       }
       &:hover {
@@ -1976,6 +1977,7 @@ img {
           ul {
             display: flex;
             gap: ptr(60);
+            flex-wrap: wrap;
             li {
               width: calc((100% - #{ptr(120)}) / 3);
 
@@ -2415,6 +2417,7 @@ img {
     .item {
       display: flex;
       margin-bottom: ptr(20);
+      align-items: flex-start;
       .wImage {
         width: percent(110, 395);
         &::before {

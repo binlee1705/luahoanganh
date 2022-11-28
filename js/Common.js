@@ -4,7 +4,7 @@ const wow = new WOW(
     {
         boxClass: 'wow', // default
         animateClass: 'animated', // default
-        offset: 100, // default 
+        offset: 50, // default 
         live: true // default
     }
 ); wow.init();
@@ -157,7 +157,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 6, 5, 4], "", ""));
     });
     $('#iconService.inside .group').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [10, 10, 10, 10, 10], "", ""));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [8, 8, 6, 5, 4], "", ""));
     });
     $('#iconService2 .group').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [0, 0, 0, 0, 0, 0], false, true, true, [9, 8, 6, 6, 4], "", "", true));

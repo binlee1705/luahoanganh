@@ -113,6 +113,10 @@
     width: 40%;
     padding-right: 1.875rem;
   }
+  .lstCate .toggleMenuChild {
+    font-size: 1.25rem;
+    width: 2.5rem;
+  }
 }
 @media (max-width: 991px) {
   #iconService .group {

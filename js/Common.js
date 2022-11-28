@@ -198,7 +198,7 @@ $(document).ready(() => {
     })
 
     setCateChild();
-    $(".toggleMenuChild").click(function () {
+    $("html").on("click", ".toggleMenuChild", function () {
         $(this).prev().slideToggle();
         $(this).toggleClass("active");
     });

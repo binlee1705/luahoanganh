@@ -74,10 +74,29 @@
   #contact .content .right {
     width: 38%;
   }
+  #news.list .detail .colLeft {
+    width: 70%;
+    padding-right: 1.875rem;
+  }
   #news.list .detail .colLeft .btnCate {
-    margin-right: -4.375rem;
+    width: auto;
+    z-index: 5;
+    margin-right: -5.375rem;
     margin-left: 0;
     float: right;
+    top: 60%;
+  }
+  #news.list .detail .colLeft .btnCate > a .text {
+    display: none;
+  }
+  #news.list .detail .colRight {
+    flex: 1;
+  }
+  #news.list .detail .fixRightDetail {
+    max-width: 70%;
+  }
+  #news.list .detail .fixRightDetail.openCate {
+    left: 100%;
   }
 }
 @media (max-width: 991px) {
@@ -350,6 +369,33 @@
   }
   #contact .content .right .item .info .hotline {
     font-size: 1.875rem;
+  }
+  #news.list .detail {
+    flex-direction: column;
+  }
+  #news.list .detail .colLeft {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 2.5rem;
+  }
+  #news.list .detail .colLeft .btnCate {
+    margin-right: 0;
+  }
+  #news.list .detail .colLeft .fixRightDetail {
+    left: auto;
+    right: 0;
+  }
+  #news.list .detail .colRight {
+    width: 100%;
+    flex: none;
+  }
+  #news.list .detail .colRight .newsHot .group:has(.wImage) {
+    gap: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #news.list .detail .colRight .newsHot .group:has(.wImage) .item {
+    width: calc((100% - 1.25rem) / 2);
   }
 }
 @media (max-width: 767px) {
@@ -685,6 +731,9 @@
     margin: 1.875rem 0;
   }
   #quesAns .wrp .group .name {
+    width: 100%;
+  }
+  #news.list .detail .colRight .newsHot .group:has(.wImage) .item {
     width: 100%;
   }
   #news.list .newsGroup.newsStyle1 .type1 {

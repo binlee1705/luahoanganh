@@ -268,6 +268,7 @@ img {
 #iconService {
   position: relative;
   background: #073d9f90;
+  overflow: hidden;
   .overlay {
     position: absolute;
     bottom: calc(100% + #{ptr(40)});
@@ -2191,6 +2192,9 @@ img {
             text-align: center;
             line-height: ptr(15);
             font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
           &:hover {
             border-color: $color-hover2;
@@ -2224,10 +2228,18 @@ img {
         background: #f2f2f2;
         z-index: 6;
         padding: ptr(10) ptr(15);
+        padding-top: 0;
         overflow: auto;
+        z-index: 2;
         .title {
-          width: 100%;
+          padding: ptr(10) 0;
+          background: #f2f2f2;
+          border-bottom: 1px solid #ccc;
           margin-bottom: ptr(10);
+          z-index: 10;
+          position: sticky;
+          top: 0;
+          width: 100%;
           font-size: ptr(18);
           font-weight: bold;
           display: flex;
@@ -2290,7 +2302,6 @@ img {
       }
       #list_sameCate {
         .group {
-          margin-top: ptr(20);
           .item {
             display: flex;
             margin-bottom: ptr(20);

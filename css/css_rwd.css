@@ -15,6 +15,7 @@
     height: 3.125rem;
   }
   #header .wrp #menu {
+    overflow: auto;
     transform: none !important;
     opacity: 1 !important;
     position: fixed;
@@ -743,6 +744,7 @@
   }
   #footer .wrp .right .group .list {
     display: none;
+    margin-bottom: 1.5625rem;
   }
   #footer .wrp .right .group .workTime {
     font-size: 1.0625rem;
@@ -893,8 +895,7 @@
   }
   #botMobile {
     padding: 0 0.3125rem;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -913,6 +914,9 @@
     gap: 0.9375rem;
     border-radius: 0.4375rem 0.4375rem 0 0;
     font-size: 0.9375rem;
+  }
+  #afterFoot {
+    padding-bottom: 3.75rem;
   }
 }
 @media (max-width: 479px) {

@@ -20,6 +20,7 @@
         }
       }
       #menu {
+        overflow: auto;
         transform: none !important;
         opacity: 1 !important;
         position: fixed;
@@ -899,6 +900,7 @@
         }
         .list {
           display: none;
+          margin-bottom: ptr(25);
         }
         .workTime {
           font-size: ptr(17);
@@ -1084,7 +1086,7 @@
   }
   #botMobile {
     padding: 0 ptr(5);
-    position: sticky;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -1103,6 +1105,9 @@
       border-radius: ptr(7) ptr(7) 0 0;
       font-size: ptr(15);
     }
+  }
+  #afterFoot {
+    padding-bottom: ptr(60);
   }
 }
 

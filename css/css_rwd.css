@@ -744,6 +744,9 @@
   #footer .wrp .right .group .list {
     display: none;
   }
+  #footer .wrp .right .group .workTime {
+    font-size: 1.0625rem;
+  }
   #news.list .newsGroup.newsStyle1 .type2 {
     gap: 1.25rem;
   }

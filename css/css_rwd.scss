@@ -130,6 +130,14 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  #footer {
+    font-size: ptr(15);
+    .wrp {
+      .right .group .list li a {
+        font-size: ptr(15);
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {

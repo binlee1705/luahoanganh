@@ -109,6 +109,12 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  #footer {
+    font-size: 0.9375rem;
+  }
+  #footer .wrp .right .group .list li a {
+    font-size: 0.9375rem;
+  }
 }
 @media (max-width: 991px) {
   #iconService .group {

@@ -140,7 +140,7 @@
   }
   .openList {
     display: block;
-    width: 35px;
+    width: 1.5625rem;
     margin-left: 0.9375rem;
   }
   .openList hr {
@@ -150,7 +150,7 @@
     transition: 0.5s all ease-in-out;
     z-index: 98;
     opacity: 1;
-    margin: 0.625rem 0;
+    margin: 0.4375rem 0;
   }
   .openList hr:first-child {
     margin-top: 0;
@@ -166,16 +166,14 @@
     opacity: 0;
   }
   .openList.ac hr:nth-child(1) {
-    -moz-transform: rotate(135deg) translateX(5px) translateY(-8px);
     background: #333;
     border-color: #333;
-    transform: rotate(135deg) translateX(5px) translateY(-8px);
+    transform: rotate(135deg) translateX(2px) translateY(-8px);
   }
   .openList.ac hr:nth-child(3) {
-    -moz-transform: rotate(-135deg) translateX(6px) translateY(8px);
     background: #333;
     border-color: #333;
-    transform: rotate(-135deg) translateX(7px) translateY(10px);
+    transform: rotate(-135deg) translateX(3px) translateY(10px);
   }
   #contactChat {
     display: none;

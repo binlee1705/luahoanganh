@@ -2924,6 +2924,9 @@ img {
 .modal {
   top: ptr(70);
 }
+#overlay {
+  z-index: 9999;
+}
 @keyframes hotline-circle-anim {
   0% {
     transform: rotate(0) scale(0.5) skew(1deg);

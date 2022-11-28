@@ -3864,6 +3864,10 @@ img {
   top: 4.375rem;
 }
 
+#overlay {
+  z-index: 9999;
+}
+
 @-webkit-keyframes hotline-circle-anim {
   0% {
     transform: rotate(0) scale(0.5) skew(1deg);

@@ -2132,8 +2132,8 @@ img {
           display: flex;
           gap: ptr(10);
           a:has(:not(img)) {
-            width: ptr(27);
-            height: ptr(27);
+            width: 27px;
+            height: 27px;
             border-radius: 50%;
             background: #737373;
             color: #fff;

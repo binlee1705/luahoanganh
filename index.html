@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <p class="title">Website Luật Hoàng Anh</p>
     <div id="tonghop">
         <div>
             <p>Trang demo (trang chính và 2 trang langding page)</p>
@@ -54,7 +55,14 @@
             justify-content: center;
             height: 100vh;
             width: 100vw;
-            ;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
 
         #tonghop {
@@ -76,6 +84,7 @@
         }
 
         p {
+            margin-top: 0;
             font-weight: bold;
             text-transform: uppercase;
             font-size: 20px;

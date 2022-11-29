@@ -2356,7 +2356,7 @@ img {
   flex-direction: column;
   right: 1.875rem;
   bottom: 5rem;
-  gap: 0.9375rem;
+  gap: 1.25rem;
 }
 #contactChat a {
   display: block;
@@ -2371,9 +2371,13 @@ img {
   border-radius: 100%;
   border: 2px solid rgba(30, 30, 30, 0.4);
   opacity: 0.1;
-  -webkit-animation: hotline-circle-anim 1.2s infinite ease-in-out;
-  animation: hotline-circle-anim 1.2s infinite ease-in-out;
+  display: none;
   transition: all 0.5s;
+}
+#contactChat .hotline-ph-circle.active {
+  -webkit-animation: hotline-circle-anim 1.2s infinite ease-in-out;
+          animation: hotline-circle-anim 1.2s infinite ease-in-out;
+  display: block;
 }
 #contactChat .hotline-phone {
   position: relative;
@@ -2382,21 +2386,24 @@ img {
   height: 3.8125rem;
   cursor: pointer;
   z-index: 200000 !important;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
   transition: visibility 0.5s;
   right: 0;
   top: 0;
 }
 #contactChat .hotline-phone .hotline-ph-circle-fill {
-  background-color: rgba(254, 58, 72, 0.5647058824);
+  background-color: rgba(1, 128, 199, 0.5647058824);
   opacity: 0.75 !important;
 }
 #contactChat .hotline-phone .hotline-ph-img-circle {
-  background-color: #fe3a48;
+  background-color: #0180c7;
+  opacity: 1 !important;
+}
+#contactChat .hotline-phone .hotline-ph-img-circle img {
+  position: relative;
+  z-index: 2;
 }
 #contactChat .hotline-phone .hotline-ph-circle {
-  border-color: #fe3a48;
+  border-color: rgba(1, 128, 199, 0.5647058824);
   opacity: 0.5;
 }
 #contactChat .hotline-phone .text {
@@ -2430,9 +2437,13 @@ img {
   border-radius: 100%;
   border: 2px solid transparent;
   opacity: 0.1;
-  -webkit-animation: hotline-circle-fill-anim 2.3s infinite ease-in-out;
-  animation: hotline-circle-fill-anim 2.3s infinite ease-in-out;
   transition: all 0.5s;
+  display: none;
+}
+#contactChat .hotline-ph-circle-fill.active {
+  display: block;
+  -webkit-animation: hotline-circle-fill-anim 2.3s infinite ease-in-out;
+          animation: hotline-circle-fill-anim 2.3s infinite ease-in-out;
 }
 #contactChat .hotline-ph-img-circle {
   display: flex;
@@ -2448,8 +2459,10 @@ img {
   border-radius: 100%;
   border: 2px solid transparent;
   opacity: 0.7;
+}
+#contactChat .hotline-ph-img-circle.active {
   -webkit-animation: hotline-circle-img-anim 1s infinite ease-in-out;
-  animation: hotline-circle-img-anim 1s infinite ease-in-out;
+          animation: hotline-circle-img-anim 1s infinite ease-in-out;
 }
 
 #pageWay {

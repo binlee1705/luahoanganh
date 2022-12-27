@@ -2571,20 +2571,23 @@
         }
 
         var checkNumber = false;
+        var checkScroll = false;
         $(window).scroll(function (e) {
             if (!checkNumber) {
                 var offset_aboutNumber = $(`#aboutNumber`).offset().top;
                 var heightHeader = $(`#header`).height();
                 if (offset_aboutNumber < $(window).scrollTop() + $(window).height() - 100) {
-                    document.querySelector('body').addEventListener('wheel', preventScroll, { passive: false });
                     checkNumber = true;
                     setTimeout(() => {
-                        $('body,html').animate({ scrollTop: offset_aboutNumber - heightHeader }, 1000);
+                        $('body,html').animate({ scrollTop: offset_aboutNumber - heightHeader }, 200);
                     }, 500);
-                    setTimeout(() => {
-                        document.querySelector('body').removeEventListener('wheel', preventScroll);
-                    }, 4000);
                 }
+            } else if (!checkScroll) {
+                document.querySelector('body').addEventListener('wheel', preventScroll, { passive: false });
+                setTimeout(() => {
+                    document.querySelector('body').removeEventListener('wheel', preventScroll);
+                }, 4000);
+                checkScroll = true;
             }
         })
     </script>

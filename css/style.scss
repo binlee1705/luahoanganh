@@ -2969,3 +2969,272 @@ img {
     transform: rotate(0) scale(1) skew(1deg);
   }
 }
+
+#legalService {
+  padding: ptr(97) 0 ptr(35) 0;
+  .title {
+    position: relative;
+    font-weight: bold;
+    font-size: ptr(40);
+    text-transform: uppercase;
+    border-bottom: 1px solid #666666;
+    display: block;
+    > a {
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      display: block;
+      background: #fff;
+      padding: 0 ptr(50);
+    }
+  }
+  .parent {
+    padding: 0 ptr(100);
+    .group {
+      padding-top: ptr(65);
+      display: flex;
+      gap: ptr(45) ptr(30);
+      flex-wrap: wrap;
+      position: relative;
+      .item {
+        width: calc((100% - #{ptr(90)}) / 4);
+        border: 3px solid $color-hover2;
+        padding: ptr(30) ptr(45) ptr(25);
+        border-radius: ptr(7);
+        position: relative;
+        box-shadow: 0 4px 9px rgba(0, 0, 0, 0.2);
+        .cateName {
+          position: absolute;
+          top: 3px;
+          transform: translateX(-50%) translateY(-100%);
+          left: 50%;
+          display: block;
+          font-weight: bold;
+          font-size: ptr(22);
+          background: #fff;
+          padding: 0 ptr(35);
+          white-space: nowrap;
+        }
+        ul {
+          padding-left: ptr(0);
+          margin: 0;
+
+          list-style: none;
+          position: relative;
+
+          li {
+            padding-left: ptr(20);
+            border-left: 2px dotted $color-hover2;
+            font-weight: bold;
+            color: $color-hover2;
+            padding-bottom: ptr(6);
+            position: relative;
+            &:last-child {
+              border-left-color: transparent;
+              padding-bottom: 0;
+            }
+            > * {
+              transition: 0.3s all ease-in-out;
+              left: 0;
+              position: relative;
+              top: -5px;
+            }
+            &:hover > * {
+              left: 5px;
+            }
+            &::before {
+              content: "\f111";
+              font-family: FontAwesome;
+              font-weight: 900;
+              font-size: ptr(10);
+              position: absolute;
+              left: ptr(-1);
+              top: 0;
+              transform: translateX(-50%);
+              line-height: normal;
+            }
+            * {
+              line-height: ptr(20);
+              display: block;
+            }
+          }
+        }
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(7) {
+          border-color: $color-hover;
+          ul {
+            li {
+              border-color: $color-hover;
+              color: $color-hover;
+              &:last-child {
+                border-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    .owl-dots {
+      @extend %owl-dots;
+      margin-top: ptr(25);
+      .owl-dot {
+        width: ptr(15);
+        height: ptr(15);
+        background: #b4c4e2;
+        margin: 0 ptr(8);
+        &.active {
+          background: #5177bc;
+        }
+      }
+    }
+    .owl-nav {
+      @extend %owl-nav;
+      .owl-next,
+      .owl-prev {
+        font-size: ptr(50);
+        color: #b4c4e2;
+        background: none !important;
+        left: ptr(20);
+        &.owl-next {
+          right: ptr(20);
+        }
+        &:hover {
+          color: #5177bc;
+        }
+      }
+    }
+  }
+}
+#formGift {
+  background: #f5f9fb;
+  padding: ptr(45) 0 ptr(55);
+  .wrp {
+    .title {
+      font-weight: bold;
+      font-size: ptr(40);
+      display: block;
+      text-align: center;
+      margin-bottom: ptr(30);
+      line-height: normal;
+    }
+    .group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .left {
+        display: flex;
+        > a {
+          margin-right: ptr(70);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: ptr(160);
+          }
+          span {
+            font-size: ptr(22);
+            font-weight: bold;
+            margin-top: ptr(14);
+          }
+        }
+      }
+      .right {
+        width: ptr(430);
+        .item {
+          margin-bottom: ptr(20);
+          p {
+            font-weight: 500;
+            font-size: ptr(20);
+            margin-bottom: ptr(7);
+          }
+          input {
+            width: 100%;
+            border-radius: ptr(6);
+            border: 1px solid $color-hover2;
+            min-height: ptr(44);
+            outline: none;
+            padding: 0 ptr(10);
+            font-size: ptr(20);
+          }
+        }
+        button {
+          width: 100%;
+          border: none;
+          background: $color-hover2;
+          color: #fff;
+          font-size: ptr(20);
+          font-weight: 500;
+          line-height: ptr(44);
+          border-radius: ptr(6);
+          transition: 0.3s all ease-in-out;
+          &:hover {
+            background: $color-hover;
+          }
+        }
+      }
+    }
+  }
+}
+#aboutNumber {
+  margin-top: ptr(60);
+  color: #fff;
+  position: relative;
+  z-index: 99;
+  max-width: 100%;
+  overflow: hidden;
+  .contentMain {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    z-index: 2;
+    .mid {
+      .content {
+        width: 100%;
+        margin-bottom: ptr(17);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .number {
+          font-size: ptr(25);
+          font-weight: 900;
+          margin-right: ptr(15);
+          width: ptr(85);
+          display: flex;
+          justify-content: flex-end;
+        }
+        .text {
+          font-size: ptr(16);
+          flex: 1;
+          line-height: ptr(23);
+        }
+      }
+    }
+    .rowImage {
+      margin-bottom: ptr(15);
+      gap: ptr(15);
+      clear: both;
+      float: right;
+      display: flex;
+      .wImage {
+        width: ptr(156);
+        &::before {
+          padding-bottom: 100%;
+        }
+      }
+    }
+  }
+  #bgNumber {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}

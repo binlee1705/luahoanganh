@@ -9,11 +9,11 @@ const wow = new WOW(
     }
 ); wow.init();
 
-function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut, mouseDrag = true) {
+function owlslide(num, margin, autoplay, dot, nav, items, animateIn, animateOut, mouseDrag = true, autoplayTimeout = 5000) {
     var option = {
         items: num,
         autoplay: num > items[0] ? autoplay : false,
-        autoplayTimeout: 5000,
+        autoplayTimeout: autoplayTimeout,
         smartSpeed: 1500,
         loop: num > 1,
         nav: num > items[0] ? nav : false,
@@ -174,6 +174,10 @@ $(document).ready(() => {
     $('#staffHome.detail .other .groupOther').each(function () {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [80, 80, 40, 30, 30, 40], true, true, true, [3, 3, 3, 2, 1], "fadeIn", "fadeOut"));
     });
+    $('#legalService .parent').each(function () {
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [30, 30, 30, 30, 30, 30], true, true, true, [1, 1, 1, 1, 1], "", "", false, 15000));
+    });
+
     $('#activity .group').each(function () {
         if ($(this).find(">*").length > 1) {
             $(this).owlCarousel({

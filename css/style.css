@@ -4271,6 +4271,7 @@ img {
   padding-bottom: 1.0625rem;
 }
 #aboutNumber .contentMain .mid .title {
+  margin-top: 1.5625rem;
   margin-left: -5rem;
   font-size: 1.875rem;
   font-weight: bold;
@@ -4294,18 +4295,22 @@ img {
   padding-left: 1.875rem;
   margin-bottom: 0.9375rem;
 }
-#aboutNumber .contentMain .rowImage {
+#aboutNumber .contentMain .right .rowImage {
   margin-bottom: 0.9375rem;
   gap: 0.9375rem;
   clear: both;
   float: right;
   display: flex;
+  align-items: flex-end;
 }
-#aboutNumber .contentMain .rowImage .wImage {
+#aboutNumber .contentMain .right .rowImage .wImage {
   width: 9.75rem;
 }
-#aboutNumber .contentMain .rowImage .wImage::before {
+#aboutNumber .contentMain .right .rowImage .wImage::before {
   padding-bottom: 100%;
+}
+#aboutNumber .contentMain .right .rowImage:last-child {
+  margin-bottom: 0;
 }
 #aboutNumber #bgNumber {
   -o-object-fit: cover;

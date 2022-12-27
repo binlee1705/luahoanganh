@@ -3242,6 +3242,7 @@ img {
         }
       }
       .title {
+        margin-top: ptr(25);
         margin-left: ptr(-80);
         font-size: ptr(30);
         font-weight: bold;
@@ -3266,16 +3267,22 @@ img {
         margin-bottom: ptr(15);
       }
     }
-    .rowImage {
-      margin-bottom: ptr(15);
-      gap: ptr(15);
-      clear: both;
-      float: right;
-      display: flex;
-      .wImage {
-        width: ptr(156);
-        &::before {
-          padding-bottom: 100%;
+    .right {
+      .rowImage {
+        margin-bottom: ptr(15);
+        gap: ptr(15);
+        clear: both;
+        float: right;
+        display: flex;
+        align-items: flex-end;
+        .wImage {
+          width: ptr(156);
+          &::before {
+            padding-bottom: 100%;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

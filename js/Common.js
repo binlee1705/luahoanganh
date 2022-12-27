@@ -175,7 +175,7 @@ $(document).ready(() => {
         $(this).owlCarousel(owlslide($(this).find('>*').size(), [80, 80, 40, 30, 30, 40], true, true, true, [3, 3, 3, 2, 1], "fadeIn", "fadeOut"));
     });
     $('#legalService .parent').each(function () {
-        $(this).owlCarousel(owlslide($(this).find('>*').size(), [30, 30, 30, 30, 30, 30], true, true, true, [1, 1, 1, 1, 1], "", "", false, 15000));
+        $(this).owlCarousel(owlslide($(this).find('>*').size(), [30, 30, 30, 30, 30, 30], true, true, true, [4, 4, 3, 2, 1], "", "", false, 15000));
     });
 
     $('#activity .group').each(function () {

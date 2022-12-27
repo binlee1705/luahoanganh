@@ -2998,8 +2998,9 @@ img {
       gap: ptr(45) ptr(30);
       flex-wrap: wrap;
       position: relative;
+      flex-direction: column;
       .item {
-        width: calc((100% - #{ptr(90)}) / 4);
+        width: 100%;
         border: 3px solid $color-hover2;
         padding: ptr(30) ptr(45) ptr(25);
         border-radius: ptr(7);
@@ -3061,15 +3062,38 @@ img {
             }
           }
         }
-        &:nth-child(2),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(7) {
+        &:nth-child(even) {
           border-color: $color-hover;
           ul {
             li {
               border-color: $color-hover;
               color: $color-hover;
+              &:last-child {
+                border-color: transparent;
+              }
+            }
+          }
+        }
+      }
+      &.group-2 {
+        .item:nth-child(odd) {
+          border-color: $color-hover;
+          ul {
+            li {
+              border-color: $color-hover;
+              color: $color-hover;
+              &:last-child {
+                border-color: transparent;
+              }
+            }
+          }
+        }
+        .item:nth-child(even) {
+          border-color: $color-hover2;
+          ul {
+            li {
+              border-color: $color-hover2;
+              color: $color-hover2;
               &:last-child {
                 border-color: transparent;
               }
@@ -3193,25 +3217,53 @@ img {
     align-items: flex-end;
     z-index: 2;
     .mid {
+      padding-left: ptr(95);
       .content {
+        position: relative;
         width: 100%;
-        margin-bottom: ptr(17);
-        display: flex;
+        display: inline;
         align-items: center;
         justify-content: space-between;
         .number {
           font-size: ptr(25);
           font-weight: 900;
-          margin-right: ptr(15);
-          width: ptr(85);
+          padding-right: ptr(15);
+          width: ptr(95);
           display: flex;
           justify-content: flex-end;
+          position: absolute;
+          left: ptr(-95);
+          top: 0;
         }
         .text {
           font-size: ptr(16);
-          flex: 1;
           line-height: ptr(23);
+          padding-bottom: ptr(17);
         }
+      }
+      .title {
+        margin-left: ptr(-80);
+        font-size: ptr(30);
+        font-weight: bold;
+        font-style: italic;
+        line-height: ptr(48);
+        position: relative;
+        padding-left: ptr(30);
+        &::before {
+          content: "";
+          width: ptr(9);
+          height: 100%;
+          background: #0ea8cc;
+          display: block;
+          display: block;
+          position: absolute;
+          left: 0;
+        }
+      }
+      .des {
+        margin-left: ptr(-80);
+        padding-left: ptr(30);
+        margin-bottom: ptr(15);
       }
     }
     .rowImage {

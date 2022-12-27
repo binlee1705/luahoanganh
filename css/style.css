@@ -1137,7 +1137,6 @@ body {
   min-height: 100vh;
   font-size: 0.875rem;
   line-height: 1.4375rem;
-  scroll-behavior: smooth;
 }
 
 .wrp {
@@ -4244,8 +4243,17 @@ img {
   align-items: flex-end;
   z-index: 2;
 }
+#aboutNumber .contentMain .left {
+  margin-right: -3.75rem;
+  width: 22.3958333333%;
+}
+#aboutNumber .contentMain .left img {
+  max-width: 100%;
+  display: block;
+}
 #aboutNumber .contentMain .mid {
   padding-left: 5.9375rem;
+  flex: 1;
 }
 #aboutNumber .contentMain .mid .content {
   position: relative;

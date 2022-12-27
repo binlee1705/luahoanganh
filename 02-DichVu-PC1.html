@@ -1465,12 +1465,13 @@
         </div>
     </div>
     <div id="aboutNumber">
-        <video id="bgNumber" loop muted playsinline autoplay preload="none" class="wow fadeIn">
+        <video id="bgNumber" loop muted playsinline autoplay preload="none" class="wow fadeInDown"
+            data-wow-duration="1s">
             <source src="./pic/backgroundNumber.webm" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="contentMain">
-            <div class="left wow fadeInUp" data-wow-delay="0.8s">
+            <div class="left wow slideInLeft" data-wow-duration="1.5s" data-wow-delay="0.8s">
                 <img src="./pic/NguyenDinhHiep.png" alt="" loading="lazy">
             </div>
             <div class="mid">
@@ -1536,8 +1537,8 @@
                         </div>
                     </div>
                 </div>
-                <p class="title">Luật sư NGUYỄN ĐÌNH HIỆP - Những con số biết nói</p>
-                <p class="des">
+                <p class="title wow fadeInDown" data-wow-delay="1s">Luật sư NGUYỄN ĐÌNH HIỆP - Những con số biết nói</p>
+                <p class="des wow fadeInDown" data-wow-delay="1.1s">
                     Với 20 năm kinh nghiệm trong lĩnh vực tư vấn pháp lý, Luật sư Nguyễn Đình Hiệp có sự am hiểu sâu sắc
                     hệ
                     thống pháp luật Việt Nam và triển khai thành công rất nhiều các vụ việc như:
@@ -2562,7 +2563,30 @@
     <script src="js/Lightbox/lightbox.js"></script>
     <script src="js/Common.js"></script>
     <script>
+        function preventScroll(e) {
+            e.preventDefault();
+            e.stopPropagation();
 
+            return false;
+        }
+
+        var checkNumber = false;
+        $(window).scroll(function (e) {
+            if (!checkNumber) {
+                var offset_aboutNumber = $(`#aboutNumber`).offset().top;
+                var heightHeader = $(`#header`).height();
+                if (offset_aboutNumber < $(window).scrollTop() + $(window).height() - 100) {
+                    document.querySelector('body').addEventListener('wheel', preventScroll, { passive: false });
+                    checkNumber = true;
+                    setTimeout(() => {
+                        $('body,html').animate({ scrollTop: offset_aboutNumber - heightHeader }, 1000);
+                    }, 500);
+                    setTimeout(() => {
+                        document.querySelector('body').removeEventListener('wheel', preventScroll);
+                    }, 4000);
+                }
+            }
+        })
     </script>
 
 </body>

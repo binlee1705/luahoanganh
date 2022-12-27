@@ -14,7 +14,6 @@ body {
   min-height: 100vh;
   font-size: ptr(14);
   line-height: ptr(23);
-  scroll-behavior: smooth;
 }
 .wrp {
   margin: auto;
@@ -3216,8 +3215,17 @@ img {
     position: relative;
     align-items: flex-end;
     z-index: 2;
+    .left {
+      margin-right: ptr(-60);
+      width: percent(430, 1920);
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
     .mid {
       padding-left: ptr(95);
+      flex: 1;
       .content {
         position: relative;
         width: 100%;

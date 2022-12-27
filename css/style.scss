@@ -3269,6 +3269,7 @@ img {
     }
     .right {
       .rowImage {
+        padding-left: ptr(20);
         margin-bottom: ptr(15);
         gap: ptr(15);
         clear: both;

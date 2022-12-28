@@ -121,7 +121,9 @@ $(window).scroll(function () {
         if (offset_aboutNumber < offsetWindow + $(window).height() && offsetWindow - 100 < offset_aboutNumber + heightNumber) {
             checkScroll = true;
             $("body").css({ "overflow": "hidden", "padding-right": "17px" })
-            $('body,html').scrollTop(offset_aboutNumber - heightHeader);
+            setTimeout(() => {
+                $('body,html').scrollTop(offset_aboutNumber - heightHeader);
+            }, 500);
             setTimeout(() => {
                 $("body").css({ "overflow": "auto", "padding-right": 0 })
             }, 4000);

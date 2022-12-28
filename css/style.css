@@ -4265,6 +4265,8 @@ img {
   z-index: 99;
   max-width: 100%;
   overflow: hidden;
+  background: url(../pic/bgNumber.png) center no-repeat;
+  background-size: cover;
 }
 #aboutNumber .contentMain {
   display: flex;
@@ -4403,6 +4405,7 @@ img {
   margin-bottom: 0;
 }
 #aboutNumber #bgNumber {
+  display: none;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;

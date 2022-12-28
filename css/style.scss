@@ -3242,6 +3242,8 @@ img {
   z-index: 99;
   max-width: 100%;
   overflow: hidden;
+  background: url(../pic/bgNumber.png) center no-repeat;
+  background-size: cover;
   .contentMain {
     display: flex;
     position: relative;
@@ -3379,6 +3381,7 @@ img {
     }
   }
   #bgNumber {
+    display: none;
     object-fit: cover;
     position: absolute;
     top: 0;

@@ -335,6 +335,7 @@
     overflow: auto;
   }
   #aboutNumber .contentMain .mid .right .rowImage {
+    display: -webkit-box;
     gap: 0;
     margin-bottom: 1.25rem;
     padding: 0;

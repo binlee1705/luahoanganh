@@ -385,6 +385,7 @@
           width: 100%;
           overflow: auto;
           .rowImage {
+            display: -webkit-box;
             gap: 0;
             margin-bottom: ptr(20);
             padding: 0;

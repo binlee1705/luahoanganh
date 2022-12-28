@@ -4161,6 +4161,7 @@ img {
 
 #formGift {
   background: #f5f9fb;
+  margin-bottom: -3.125rem;
   padding: 2.8125rem 0 3.4375rem;
 }
 #formGift .wrp .title {
@@ -4287,6 +4288,8 @@ img {
   line-height: 3rem;
   position: relative;
   padding-left: 1.875rem;
+  display: inline-flex;
+  align-items: center;
 }
 #aboutNumber .contentMain .mid .title::before {
   content: "";
@@ -4298,10 +4301,22 @@ img {
   position: absolute;
   left: 0;
 }
+#aboutNumber .contentMain .mid .title:after {
+  content: "";
+  width: 15rem;
+  height: 0.1875rem;
+  background: #0ea8cc;
+  display: block;
+  margin-left: 1.25rem;
+}
 #aboutNumber .contentMain .mid .des {
   margin-left: -5rem;
   padding-left: 1.875rem;
   margin-bottom: 0.9375rem;
+}
+#aboutNumber .contentMain .right {
+  position: relative;
+  z-index: 2;
 }
 #aboutNumber .contentMain .right .rowImage {
   padding-left: 1.25rem;
@@ -4317,6 +4332,21 @@ img {
 }
 #aboutNumber .contentMain .right .rowImage .wImage::before {
   padding-bottom: 100%;
+}
+#aboutNumber .contentMain .right .rowImage .wImage .text {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3764705882);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3125rem;
+  pointer-events: none;
 }
 #aboutNumber .contentMain .right .rowImage:last-child {
   margin-bottom: 0;

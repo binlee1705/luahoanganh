@@ -4405,7 +4405,6 @@ img {
   margin-bottom: 0;
 }
 #aboutNumber #bgNumber {
-  display: none;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;

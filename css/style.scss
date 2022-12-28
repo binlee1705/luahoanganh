@@ -3247,7 +3247,30 @@ img {
         .text {
           font-size: ptr(16);
           line-height: ptr(23);
-          padding-bottom: ptr(17);
+          padding-bottom: ptr(15);
+        }
+        .btnNumber {
+          margin-bottom: ptr(30);
+          margin-right: ptr(30);
+          line-height: ptr(47);
+          text-transform: uppercase;
+          font-size: ptr(17);
+          font-weight: 500;
+          width: ptr(220);
+          text-align: center;
+          background: $color-hover2;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          transition: 0.3s all ease-in-out;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            border-radius: 20px;
+            background: $color-hover;
+          }
         }
       }
       .title {

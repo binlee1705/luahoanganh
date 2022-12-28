@@ -332,10 +332,10 @@
   #aboutNumber .contentMain .mid .right {
     display: -webkit-box;
     width: 100%;
+    max-width: 100%;
     overflow: auto;
   }
   #aboutNumber .contentMain .mid .right .rowImage {
-    display: -webkit-box;
     gap: 0;
     margin-bottom: 1.25rem;
     padding: 0;

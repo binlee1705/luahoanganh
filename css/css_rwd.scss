@@ -803,8 +803,19 @@
       }
     }
   }
-  #formGift .wrp .title {
-    font-size: ptr(30);
+  #formGift .wrp {
+    .title {
+      font-size: ptr(30);
+    }
+    .group {
+      .left {
+        flex: 1;
+        justify-content: space-evenly;
+        > a {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 

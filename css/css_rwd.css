@@ -672,6 +672,13 @@
   #formGift .wrp .title {
     font-size: 1.875rem;
   }
+  #formGift .wrp .group .left {
+    flex: 1;
+    justify-content: space-evenly;
+  }
+  #formGift .wrp .group .left > a {
+    margin-right: 0;
+  }
 }
 @media (max-width: 767px) {
   .wrp {

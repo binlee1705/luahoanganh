@@ -3,6 +3,16 @@
   :root {
     font-size: 13px;
   }
+  #aboutNumber .contentMain .mid .content .text {
+    font-size: 0.9375rem;
+    line-height: 1.3125rem;
+  }
+  #aboutNumber .contentMain .right .rowImage .wImage {
+    zoom: 0.7;
+  }
+  #aboutNumber .contentMain .right .rowImage:first-child .wImage {
+    margin-top: 2.5rem;
+  }
 }
 @media (max-width: 1199px) {
   :root {
@@ -250,6 +260,94 @@
   .lstCate .menuChild li a {
     font-size: 0.9375rem;
     margin: 0.625rem 0;
+  }
+  #aboutNumber {
+    overflow: visible;
+  }
+  #aboutNumber .contentMain {
+    align-items: unset;
+  }
+  #aboutNumber .contentMain .left {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #aboutNumber .contentMain .left::before {
+    content: "";
+    flex: 1;
+  }
+  #aboutNumber .contentMain .left img {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+  }
+  #aboutNumber .contentMain .mid {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 1.25rem;
+  }
+  #aboutNumber .contentMain .mid .title {
+    margin-left: 0;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  #aboutNumber .contentMain .mid .title:after {
+    display: none;
+  }
+  #aboutNumber .contentMain .mid .des {
+    margin-left: 0;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  #aboutNumber .contentMain .mid .content {
+    margin-bottom: 0.9375rem;
+    display: flex;
+    align-items: center;
+  }
+  #aboutNumber .contentMain .mid .content .number {
+    position: static;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  #aboutNumber .contentMain .mid .content .text {
+    padding-left: 0;
+    flex: 1;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+    padding-bottom: 0;
+  }
+  #aboutNumber .contentMain .mid .content:last-child {
+    padding: 0 3.125rem;
+    display: flex;
+    margin-top: 1.5625rem;
+    gap: 1.875rem;
+  }
+  #aboutNumber .contentMain .mid .content:last-child .btnNumber {
+    flex: 1;
+    margin-right: 0;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  #aboutNumber .contentMain .mid .right {
+    display: -webkit-box;
+    width: 100%;
+    overflow: auto;
+  }
+  #aboutNumber .contentMain .mid .right .rowImage {
+    gap: 0;
+    margin-bottom: 1.25rem;
+    padding: 0;
+  }
+  #aboutNumber .contentMain .mid .right .rowImage .wImage {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+    margin: 0 !important;
+    margin-right: 1.25rem !important;
+    width: 12.5rem !important;
+  }
+  #aboutNumber .contentMain .mid .right .rowImage .wImage .text {
+    line-height: 1.375rem;
   }
 }
 @media (max-width: 991px) {
@@ -558,6 +656,20 @@
   }
   #footer .wrp .right .group .list li a {
     font-size: 0.9375rem;
+  }
+  #aboutNumber .contentMain .mid .title {
+    font-size: 1.5625rem;
+    line-height: 1.875rem;
+  }
+  #legalService .parent {
+    padding: 0 1.25rem;
+  }
+  #legalService .parent .owl-nav .owl-next,
+#legalService .parent .owl-nav .owl-prev {
+    font-size: 2.1875rem;
+  }
+  #formGift .wrp .title {
+    font-size: 1.875rem;
   }
 }
 @media (max-width: 767px) {
@@ -918,6 +1030,13 @@
   #afterFoot {
     padding-bottom: 3.75rem;
   }
+  #aboutNumber .contentMain .mid {
+    padding-right: 0.625rem;
+  }
+  #aboutNumber .contentMain .mid .content:last-child {
+    padding: 0;
+    gap: 1.25rem;
+  }
 }
 @media (max-width: 479px) {
   #quesAns {
@@ -1213,5 +1332,38 @@
   #header .wrp #menu ul li a {
     padding-left: 0;
     padding-right: 0;
+  }
+  #formGift .wrp .group {
+    flex-direction: column;
+  }
+  #formGift .wrp .group .left {
+    margin-bottom: 1.25rem;
+    justify-content: center;
+    gap: 1.875rem;
+  }
+  #formGift .wrp .group .left > a {
+    margin-right: 0;
+  }
+  #legalService {
+    padding-top: 3.75rem;
+  }
+  #legalService .title > a {
+    font-size: 1.875rem;
+    padding: 0 1.25rem;
+  }
+  #aboutNumber .contentMain {
+    flex-direction: column;
+  }
+  #aboutNumber .contentMain .left {
+    display: none !important;
+  }
+  #aboutNumber .contentMain .mid {
+    padding: 0 0.625rem;
+  }
+  #aboutNumber .contentMain .mid .content:last-child {
+    gap: 0.625rem;
+  }
+  #aboutNumber .contentMain .mid .content:last-child .btnNumber {
+    font-size: 0.9375rem;
   }
 }/*# sourceMappingURL=css_rwd.css.map */

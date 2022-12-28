@@ -4224,6 +4224,7 @@ img {
 }
 #formGift .wrp .group .right {
   width: 26.875rem;
+  max-width: 100%;
 }
 #formGift .wrp .group .right .item {
   margin-bottom: 1.25rem;
@@ -4410,4 +4411,7 @@ img {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+#aboutNumber .imageMain {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

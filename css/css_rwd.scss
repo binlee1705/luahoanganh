@@ -5,6 +5,30 @@
   :root {
     font-size: 13px;
   }
+  #aboutNumber {
+    .contentMain {
+      .mid {
+        .content {
+          .text {
+            font-size: ptr(15);
+            line-height: ptr(21);
+          }
+        }
+      }
+      .right {
+        .rowImage {
+          .wImage {
+            zoom: 0.7;
+          }
+          &:first-child {
+            .wImage {
+              margin-top: ptr(40);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1199px) {
@@ -294,6 +318,87 @@
       li a {
         font-size: ptr(15);
         margin: ptr(10) 0;
+      }
+    }
+  }
+  #aboutNumber {
+    overflow: visible;
+    .contentMain {
+      align-items: unset;
+      .left {
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        &::before {
+          content: "";
+          flex: 1;
+        }
+        img {
+          position: sticky;
+          bottom: 0;
+        }
+      }
+      .mid {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        padding-right: ptr(20);
+        .title {
+          margin-left: 0;
+          animation-delay: 0s !important;
+          &:after {
+            display: none;
+          }
+        }
+        .des {
+          margin-left: 0;
+          animation-delay: 0s !important;
+        }
+        .content {
+          margin-bottom: ptr(15);
+          display: flex;
+          align-items: center;
+          .number {
+            position: static;
+            animation-delay: 0s !important;
+          }
+          .text {
+            padding-left: 0;
+            flex: 1;
+            animation-delay: 0s !important;
+            padding-bottom: 0;
+          }
+          &:last-child {
+            padding: 0 ptr(50);
+            display: flex;
+            margin-top: ptr(25);
+            gap: ptr(30);
+            .btnNumber {
+              flex: 1;
+              margin-right: 0;
+              animation-delay: 0s !important;
+            }
+          }
+        }
+        .right {
+          display: -webkit-box;
+          width: 100%;
+          overflow: auto;
+          .rowImage {
+            gap: 0;
+            margin-bottom: ptr(20);
+            padding: 0;
+            .wImage {
+              animation-delay: 0s !important;
+              margin: 0 !important;
+              margin-right: ptr(20) !important;
+              width: ptr(200) !important;
+              .text {
+                line-height: ptr(22);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -683,6 +788,22 @@
         font-size: ptr(15);
       }
     }
+  }
+  #aboutNumber .contentMain .mid .title {
+    font-size: ptr(25);
+    line-height: ptr(30);
+  }
+  #legalService .parent {
+    padding: 0 ptr(20);
+    .owl-nav {
+      .owl-next,
+      .owl-prev {
+        font-size: ptr(35);
+      }
+    }
+  }
+  #formGift .wrp .title {
+    font-size: ptr(30);
   }
 }
 
@@ -1109,6 +1230,13 @@
   #afterFoot {
     padding-bottom: ptr(60);
   }
+  #aboutNumber .contentMain .mid {
+    padding-right: ptr(10);
+    .content:last-child {
+      padding: 0;
+      gap: ptr(20);
+    }
+  }
 }
 
 @media (max-width: 479px) {
@@ -1464,6 +1592,42 @@
                 right: 0;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  #formGift .wrp .group {
+    flex-direction: column;
+    .left {
+      margin-bottom: ptr(20);
+      justify-content: center;
+      gap: ptr(30);
+      > a {
+        margin-right: 0;
+      }
+    }
+  }
+  #legalService {
+    padding-top: ptr(60);
+    .title > a {
+      font-size: ptr(30);
+      padding: 0 ptr(20);
+    }
+  }
+  #aboutNumber {
+    .contentMain {
+      flex-direction: column;
+      .left {
+        display: none !important;
+      }
+      .mid {
+        padding: 0 ptr(10);
+        .content:last-child {
+          gap: ptr(10);
+          .btnNumber {
+            font-size: ptr(15);
           }
         }
       }

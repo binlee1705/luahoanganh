@@ -340,6 +340,7 @@
     padding: 0;
   }
   #aboutNumber .contentMain .mid .right .rowImage .wImage {
+    zoom: 1;
     -webkit-animation-delay: 0s !important;
             animation-delay: 0s !important;
     margin: 0 !important;
@@ -1365,5 +1366,8 @@
   }
   #aboutNumber .contentMain .mid .content:last-child .btnNumber {
     font-size: 0.9375rem;
+  }
+  #aboutNumber .contentMain .mid .right .rowImage .wImage {
+    width: 9.375rem !important;
   }
 }/*# sourceMappingURL=css_rwd.css.map */

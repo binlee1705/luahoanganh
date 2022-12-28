@@ -389,6 +389,7 @@
             margin-bottom: ptr(20);
             padding: 0;
             .wImage {
+              zoom: 1;
               animation-delay: 0s !important;
               margin: 0 !important;
               margin-right: ptr(20) !important;
@@ -1628,6 +1629,13 @@
           gap: ptr(10);
           .btnNumber {
             font-size: ptr(15);
+          }
+        }
+        .right {
+          .rowImage {
+            .wImage {
+              width: ptr(150) !important;
+            }
           }
         }
       }

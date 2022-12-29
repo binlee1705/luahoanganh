@@ -122,7 +122,9 @@ $(window).scroll(function () {
             checkScroll = true;
             $("body").css({ "overflow": "hidden", "padding-right": "17px" })
             setTimeout(() => {
-                $('body,html').scrollTop(offset_aboutNumber - heightHeader);
+                $('html,body').animate({
+                    scrollTop: offset_aboutNumber - heightHeader
+                }, 'slow');
             }, 500);
             setTimeout(() => {
                 $("body").css({ "overflow": "auto", "padding-right": 0 })

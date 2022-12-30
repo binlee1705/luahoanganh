@@ -245,7 +245,7 @@ $(window).resize(function () {
     }
 })
 $(window).load(function () {
-    $("#slide #iconService").addClass("active")
+    $("#iconService").addClass("active")
 });
 
 function animationChar(ele, animationIn = "in", animationOut = "out", split = 1) {

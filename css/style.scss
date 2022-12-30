@@ -260,7 +260,12 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    opacity: 0;
+    transition: 0.3s all ease-in-out;
+    &.active {
+      opacity: 1;
+    }
   }
 }
 #iconService {
@@ -3179,7 +3184,7 @@ img {
       display: flex;
       justify-content: center;
       align-items: center;
-      .left { 
+      .left {
         display: flex;
         > a {
           margin-right: ptr(70);

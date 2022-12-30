@@ -1369,7 +1369,12 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+}
+#slide #iconService.active {
+  opacity: 1;
 }
 
 #iconService {

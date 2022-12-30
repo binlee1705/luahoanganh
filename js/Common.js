@@ -244,6 +244,9 @@ $(window).resize(function () {
         $("#footer .nameCate i").removeClass("active");
     }
 })
+$(window).load(function () {
+    $("#slide #iconService").addClass("active")
+});
 
 function animationChar(ele, animationIn = "in", animationOut = "out", split = 1) {
     if (split === 1) {

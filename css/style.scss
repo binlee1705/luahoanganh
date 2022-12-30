@@ -848,6 +848,9 @@ img {
         &:before {
           padding-bottom: wImage(603, 695);
         }
+        img {
+          object-position: top center;
+        }
       }
       .info {
         flex: 1;

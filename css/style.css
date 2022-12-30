@@ -1918,6 +1918,10 @@ img {
 #staffHome .group .item .wImage:before {
   padding-bottom: 86.7625899281%;
 }
+#staffHome .group .item .wImage img {
+  -o-object-position: top center;
+     object-position: top center;
+}
 #staffHome .group .item .info {
   flex: 1;
   padding: 2.5rem;

@@ -4320,12 +4320,12 @@ img {
 }
 #aboutNumber .contentMain .mid .content .btnNumber {
   margin-bottom: 1.875rem;
-  margin-right: 1.875rem;
+  margin-right: 1.25rem;
   line-height: 2.9375rem;
   text-transform: uppercase;
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   font-weight: 500;
-  width: 13.75rem;
+  width: 10.625rem;
   text-align: center;
   background: #0ea8cc;
   display: inline-flex;

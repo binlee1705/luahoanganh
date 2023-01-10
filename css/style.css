@@ -1165,6 +1165,12 @@ img {
 .noidung {
   padding: 0;
 }
+.noidung a {
+  color: #0ea8cc;
+}
+.noidung a:hover {
+  color: #073d9f;
+}
 
 .openSub {
   display: none;

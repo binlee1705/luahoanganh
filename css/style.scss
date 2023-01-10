@@ -39,6 +39,12 @@ img {
 }
 .noidung {
   padding: 0;
+  a {
+    color: $color-hover2;
+    &:hover {
+      color: $color-hover;
+    }
+  }
 }
 .openSub {
   display: none;

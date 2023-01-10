@@ -1166,10 +1166,10 @@ img {
   padding: 0;
 }
 .noidung a {
-  color: #0ea8cc;
+  color: #0ea8cc !important;
 }
 .noidung a:hover {
-  color: #073d9f;
+  color: #073d9f !important;
 }
 
 .openSub {

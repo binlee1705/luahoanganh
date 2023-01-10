@@ -40,9 +40,9 @@ img {
 .noidung {
   padding: 0;
   a {
-    color: $color-hover2;
+    color: $color-hover2 !important;
     &:hover {
-      color: $color-hover;
+      color: $color-hover !important;
     }
   }
 }
